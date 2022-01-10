@@ -80,15 +80,7 @@ const Home = () => {
           </div>
           <div className={styles['container7']}>
             <span className={styles['text1']}>
-              <span>
-                Contact us:
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: ' ',
-                  }}
-                />
-              </span>
-              <span>asylum.platform@gmail.com</span>
+              <a href="mailto:info@asylum.space">Contact us</a>
               <span></span>
             </span>
           </div>
