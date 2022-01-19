@@ -42,7 +42,7 @@ const Home = () => {
               App demo
             </a>
             <a
-              href="https://www.canva.com/design/DAEyFF4xBd0/0xCBmqtSB4G7GiFfCuaIcA/view?utm_content=DAEyFF4xBd0&amp;utm_campaign=designshare&amp;utm_medium=link&amp;utm_source=sharebutton"
+              href="https://www.canva.com/design/DAE1y6AHyCA/Lh0gxRtIePVtb_QfzyP6aQ/view?utm_content=DA[…]tm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
               target="_blank"
               rel="noreferrer noopener"
               className={` ${styles['link2']} ${projectStyles['button']} `}
