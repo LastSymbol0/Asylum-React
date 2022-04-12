@@ -33,14 +33,6 @@ const Home = () => {
             >
               Litepaper
             </a>
-//             <a
-//               href="https://lastsymbol0.github.io/Asylum/#/Asylum/"
-//               target="_blank"
-//               rel="noreferrer noopener"
-//               className={` ${styles['link1']} ${projectStyles['button']} `}
-//             >
-//               App demo
-//             </a>
             <a
               href="https://www.canva.com/design/DAE1y6AHyCA/Lh0gxRtIePVtb_QfzyP6aQ/view?utm_content=DA[…]tm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
               target="_blank"
