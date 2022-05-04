@@ -18,13 +18,13 @@ const data = [
 const WhatScreen = () => {
     const locale = useLocales('pages.home.what-screen')
     return (
-        <div className={styles.whatScreen}>
+        <div id="theAsylum" className={styles.whatScreen}>
             <div className={styles.whatScreen__content}>
                 <ScreenTitle>{ locale.title }</ScreenTitle>
                 <div className={styles.content__rows}>
                     {locale.body.map((text, i) => (
                         <div key={i} className={styles.content__row}>
-                            <p>{ text }</p>
+                            <p>{ text.split('\n').map(i => <><br/>{i}</>) }</p>
                             <div className={styles.row__image}>
                                 <Image src={data[i]} alt="" />
                             </div>

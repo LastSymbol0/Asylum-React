@@ -7,6 +7,10 @@
                     "link": "#features"
                 },
                 {
+                    "title": "roadmap",
+                    "link": "#roadmap"
+                },
+                {
                     "title": "team",
                     "link": "#team"
                 },
@@ -42,7 +46,7 @@
     "pages": {
         "home": {
             "main-screen": {
-                "title": "Entrypoint to the gaming metaverse",
+                "title": "Entrypoint to the gaming Metaverse",
                 "cta": [
                     {
                         "title": "For creators",
@@ -50,15 +54,15 @@
                     },
                     {
                         "title": "For gamers",
-                        "link": "#"
+                        "link": "#theAsylum"
                     }
                 ]
             },
             "what-screen": {
                 "title": "What is the Asylum?",
                 "body": [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis hendrerit dolor magna eget est lorem. Duis ultricies lacus sed turpis tincidunt id aliquet risus. Etiam sit amet nisl purus in mollis.",
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis hendrerit dolor magna eget est lorem. Duis ultricies lacus sed turpis tincidunt id aliquet risus. Etiam sit amet nisl purus in mollis. "
+                    "The transition to the Metaverse will be the next step for entertainment industry. But why are we all still not in the Metaverse if so many metaverse projects already exist? \n Okay, actually, because we are trying to build the Metaverse, completely new concept for us, using the same approaches that were used for the regulars games and platforms.",
+                    "We are creating Asylum to provide a platform for the next generation of gaming, united into the single Metaverse, where anyone has a place to play, study, work and express themselves. Whether you are a Creator or a Player - we are building Asylum to empower you to become a part of the Metaverse."
                 ],
                 "loading": "loading.."
             },
@@ -69,8 +73,9 @@
                         "tab": "Interoperability",
                         "title": "Interoperability",
                         "body": [
-                            "Have you seen Ready player one (or read the book)? In such a universe, there are many worlds open for the Player to explore. But between these worlds, there is no border like in common games that we used to play. Imagine the world where the gun from CSGo can be used in Call of Duty natively, without any extra actions.",
-                            "Asylum is built with interoperability in mind and the main representation of this idea is interoperable NFT items. For Creators building with Asylum means not just building another project but adding value to the limitless Metaverse, reusing, improving, and monetizing their efforts; joining the ecosystem of the creators."
+                            "Have you seen Ready Player One?",
+                            "In such a universe, there are many worlds open for the Player to explore. But between these worlds, there are no borders like in common games which we used to play. Imagine the world where the gun from CSGO can be used in Call of Duty natively, without any extra actions.",
+                            "Asylum is built with interoperability in mind and the main representation of this idea is interoperable NFT items. For Creators building with Asylum means not just building another project -  but adding value to the limitless Metaverse, reusing, improving, and monetizing their efforts; joining the ecosystem of the creators."
                         ]
                     },
                     {
@@ -85,22 +90,26 @@
                         "tab": "Blockchain integration",
                         "title": "Easy integration of anything in Blockchain and Metaverse",
                         "body": [
-                            "I think you don’t mind if I say that game developers should develop games (and artists should just art). We are keeping this principle in mind trying to make the integration of our ecosystem easy and user-friendly.",
-                            "Just a few clicks and the metaverse is welcoming you. Just like this chill guy in the illustration."
+                            "I think you don’t mind if I say that game developers should develop games (and artists should make art). We are keeping this principle in mind trying to make the integration of our ecosystem easy and user-friendly.",
+                            "A few clicks and the Metaverse is welcoming you. Just like this chill guy in the illustration."
                         ]
                     },
                     {
                         "tab": "Economic",
                         "title": "Trusted and unified economic",
                         "body": [
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis hendrerit dolor magna eget est lorem. Duis ultricies lacus sed turpis tincidunt id aliquet risus. Etiam sit amet nisl purus in mollis. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae. Proin fermentum leo vel orci porta non. Nisl tincidunt eget nullam non nisi. Integer malesuada nunc vel risus. Mauris vitae ultricies leo integer. Suspendisse ultrices gravida dictum fusce ut placerat orci. Hendrerit gravida rutrum quisque non."
+                            "Already read Ready Player One?",
+                            "Metaverse is not only about the entertainment, but also about the economy because building a life-like experience we can not miss this point.\n\nOne of the big advantages that blockchain gives to the gaming industry is the possibility to monetize efforts of Players and Creators.",
+                            "We, at the Asylum, take the best from the existing approaches, like play-to-earn, and unify all stand-alone economies to a single one that will be friendly for Players and advantageous for Creators."
                         ]
                     },
                     {
                         "tab": "Sustainability",
                         "title": "Sustainability trough decentralization",
                         "body": [
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis hendrerit dolor magna eget est lorem. Duis ultricies lacus sed turpis tincidunt id aliquet risus. Etiam sit amet nisl purus in mollis. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae. Proin fermentum leo vel orci porta non. Nisl tincidunt eget nullam non nisi. Integer malesuada nunc vel risus. Mauris vitae ultricies leo integer. Suspendisse ultrices gravida dictum fusce ut placerat orci. Hendrerit gravida rutrum quisque non"
+                            "We believe that the future of the Internet is decentralized.",
+                            "You can say that all these features can be built in centralized way and you will be right. But existing examples already showed that such centralized systems are not trusted from the users' side. And this is tenable -  you cannot trust a system when there is a possibility of a failure of one server and all your assets are gonna get lost.",
+                            "But when the stability of the system is the responsibility of the system users - such a system will live until the user’s interest will live. This is our main argument for using decentralized technologies as they are built for the users, supporting the values of democracy and freedom."
                         ]
                     }
                 ]
@@ -111,6 +120,7 @@
                     {
                         "title": "q1",
                         "list": [
+                            "· Asylum concept and strategy",
                             "· Product development start",
                             "· First agreements with games"
                         ]
@@ -118,22 +128,23 @@
                     {
                         "title": "q2",
                         "list": [
-                            "· Website launch",
+                            "· Website",
                             "· Litepaper",
                             "PoC:",
-                            "· Interoperability standards",
-                            "· Game developers console",
-                            "· Substrate pallets",
-                            "· Game distribution system",
-                            "· 2 Demo games"
+                            "  · Interoperability standards",
+                            "  · Game developers console",
+                            "  · Substrate pallets",
+                            "  · Game distribution system",
+                            "  · 2 Demo games"
+
                         ]
                     },
                     {
                         "title": "q3",
                         "list": [
                             "· Seed round",
-                            "· MVP development start",
                             "· Whitepaper",
+                            "· MVP development start",
                             "· Integrations with games"
                         ]
                     },
@@ -141,11 +152,11 @@
                         "title": "q4",
                         "list": [
                             "· Token launch",
-                            "MVP launch",
-                            "· Asylum for players",
-                            "· Creators ecosystem",
-                            "· Live in Polkadot/Kusama",
-                            "· 10 games in ecosystem"
+                            "MVP launch:",
+                            "  · Asylum for players (app)",
+                            "  · Creators ecosystem (framework)",
+                            "  · Live in Polkadot/Kusama",
+                            "  · 10-20 games in ecosystem"
                         ]
                     },
                     {
