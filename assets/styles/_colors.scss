@@ -1,0 +1,25 @@
+@use "sass:map";
+
+$colors: (
+    light100: #FFFFFF,
+    gradient100: linear-gradient(87.83deg, #CC00FF 0%, #50BFFF 100%),
+    gray100: #BABABA,
+    dark100: #161616,
+);
+
+@mixin generateColors() {
+    @each $name, $color in $colors {
+        --color-#{$name}: #{$color};
+    }   
+}
+
+@function allColors() {
+    @return $colors;
+}
+
+@function color($name) {
+    @if not map.get($colors, $name) {
+        @error '"#{$name}" is not a valid color name';
+    }
+    @return var(--color-#{$name})
+}

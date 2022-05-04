@@ -1,0 +1,115 @@
+@use '../../../assets/styles/index.scss' as *;
+
+.materialsScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: rem(84);
+    padding: 0 rem(350);
+    @media screen and (max-width: point(lg)) {
+        padding: 0 rem(150);
+    }
+    @media screen and (max-width: point(md)) {
+        padding: 0 rem(100);
+    }
+    @media screen and (max-width: point(sm)) {
+        padding: 0 rem(16);
+        margin-top: rem(40);
+    }
+}
+
+.materialsScreen__screenTitle {
+    width: rem(160) !important;
+    @media screen and (max-width: point(sm)) {
+        width: rem(100) !important;
+    }
+}
+
+.materialsScreen__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    .content__row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: point(sm)) {
+            flex-direction: column !important;
+
+            > span {
+                margin: rem(60) 0 !important;
+            }
+        }
+    }
+
+    .content__background {
+        position: absolute;
+        width: rem(1080);
+        height: rem(790);
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @media screen and (max-width: point(sm)) {
+            width: rem(500);
+            height: rem(300);
+        }
+
+        > span {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+}
+
+.materialsScreen__content .content__row {
+    &:nth-child(1) {
+        margin-right: rem(400);
+        @media screen and (max-width: point(md)) {
+            margin-right: rem(100);
+        }
+        @media screen and (max-width: point(sm)) {
+            margin-right: 0;
+        }
+        > span {
+            width: rem(338) !important;
+            height: rem(366) !important;
+            margin-right: rem(39) !important;
+            margin-left: rem(-150) !important;
+            @media screen and (max-width: point(sm)) {
+                width: rem(188) !important;
+                height: rem(203) !important;
+                margin-right: 0 !important;
+                margin-left: 0 !important;
+            }
+        }
+    }
+    &:nth-child(2) {
+        flex-direction: row-reverse;
+        margin-left: rem(400);
+        margin-top: rem(-100);
+        @media screen and (max-width: point(md)) {
+            margin-left: rem(100);
+        }
+        @media screen and (max-width: point(sm)) {
+            margin-left: 0;
+            margin-top: 0;
+        }
+        > span {
+            width: rem(305) !important;
+            height: rem(284) !important;
+            margin-left: rem(39) !important;
+            margin-right: rem(-150) !important;
+            @media screen and (max-width: point(sm)) {
+                width: rem(170) !important;
+                height: rem(158) !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+        }
+    }
+}

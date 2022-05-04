@@ -1,0 +1,12 @@
+svg {
+    .iconGradient {
+        opacity: 0;
+        transition: .3s ease;
+    }
+}
+
+svg:hover, svg:active {
+    > .iconGradient {
+        opacity: 1;
+    }
+}

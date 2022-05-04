@@ -1,0 +1,121 @@
+@use '../../../../assets/styles/index.scss' as *;
+
+.feature__slider {
+    width: 100%;
+    margin-top: rem(100);
+    @media screen and (max-width: point(sm)) {
+        margin-top: rem(60);
+    }
+}
+
+.slider__slide {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    @media screen and (max-width: point(sm)) {
+        flex-direction: column !important;
+        padding-top: rem(80);
+    }
+
+    &.slide2, &.slide4 {
+        flex-direction: row-reverse;
+    
+        .slide__content {
+            margin-right: 0;
+            margin-left: rem(44);
+            @media screen and (max-width: point(sm)) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .slide__image {
+        width: rem(600);
+        margin-left: rem(44);
+        @media screen and (max-width: point(sm)) {
+            margin-left: 0;
+        }
+        
+        img {
+            width: rem(600) !important;
+            height: auto !important;
+            max-height: none !important;
+        }
+
+        @media screen and (max-width: point(md)) {
+            width: rem(300);
+            img {
+                width: rem(300) !important;
+            }
+        }
+    }
+
+    .slide__content {
+        flex: 1;
+        margin-right: rem(44);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media screen and (max-width: point(sm)) {
+            margin-right: 0;
+        }
+
+        h3 {
+            @include font-oxanium-semibold;
+            font-size: font(44);
+            color: color(light100);
+            text-align: center;
+            @media screen and (max-width: point(sm)) {
+                position: absolute;
+                width: 90%;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: font(18);
+            }
+        }
+
+        .content__text {
+            position: relative;
+            max-width: rem(322);
+            margin-top: rem(44);
+
+            p {
+                @include font-oxanium-medium;
+                font-size: font(18);
+                line-height: rem(31);
+                text-align: center;
+                &:not(:first-child) {
+                    margin-top: rem(25);
+                    @media screen and (max-width: point(sm)) {
+                        margin-top: rem(15);
+                    }
+                }
+                @media screen and (max-width: point(sm)) {
+                    font-size: font(11);
+                    line-height: rem(22);
+                }
+            }
+
+            .text__blur {
+                position: absolute;
+                width: rem(500);
+                height: rem(700);
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+                @media screen and (max-width: point(sm)) {
+                    width: rem(400);
+                    height: rem(400);
+                }
+
+                > span {
+                    width: 100% !important;
+                    height: 100% !important;
+                }
+            }
+        }
+    }
+}

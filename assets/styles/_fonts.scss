@@ -1,0 +1,61 @@
+@use 'sass:map';
+@use 'sass:list';
+@use 'mixins' as *;
+
+$fonts: (11, 12, 14, 16, 18, 24, 28, 32, 36, 44, 55);
+
+@mixin generateFonts() {
+    @each $name in $fonts {
+        --font-size-#{$name}: #{rem($name)};
+    }   
+}
+
+@function font($name) {
+    @if not list.index($fonts, $name) {
+        @error '"#{$name}" is not a valid size';
+    }
+   @return var(--font-size-#{$name});
+}
+
+@mixin font-ubuntu-light {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300 !important;
+}
+
+@mixin font-ubuntu-regular {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400 !important;
+}
+
+@mixin font-ubuntu-medium {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500 !important;
+}
+
+@mixin font-oxanium-extralight {
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 200 !important;
+}
+
+@mixin font-oxanium-regular {
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 400 !important;
+}
+
+@mixin font-oxanium-medium {
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 500 !important;
+}
+
+@mixin font-oxanium-semibold {
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 600 !important;
+}
+
+
+
+
+
+
+
+

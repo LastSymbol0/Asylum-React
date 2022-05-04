@@ -1,0 +1,2 @@
+export const LAPTOP_BREAKPOINT = 1080
+export const MOBILE_BREAKPOINT = 576

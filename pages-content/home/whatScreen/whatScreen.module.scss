@@ -1,0 +1,111 @@
+@use '../../../assets/styles/index.scss' as *;
+
+.whatScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: rem(150);
+    padding: 0 rem(350);
+    @media screen and (max-width: point(lg)) {
+        padding: 0 rem(150);
+    }
+    @media screen and (max-width: point(md)) {
+        padding: 0 rem(100);
+    }
+    @media screen and (max-width: point(sm)) {
+        padding: 0 rem(16);
+        margin-top: rem(50);
+    }
+}
+
+.whatScreen__content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: rem(38) rem(70);
+
+    .content__background {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        > span {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+
+    .content__rows {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        @media screen and (max-width: point(md)) {
+            margin-top: rem(25);
+        }
+    }
+
+    .content__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:last-child { flex-direction: row-reverse; }
+
+        p {
+            @include font-ubuntu-regular;
+            font-size: font(18);
+            line-height: 189%;
+            max-width: rem(498);
+            @media screen and (max-width: point(sm)) {
+                font-size: font(11);
+                max-width: rem(137);
+            }
+        }
+
+        &:first-child p { margin-right: rem(146); }
+        &:last-child p { margin-left: rem(90); text-align: right; }
+        @media screen and (max-width: point(md)) {
+            &:first-child p { margin-right: rem(60); }
+            &:last-child p { margin-left: rem(60); }
+            &:last-child { margin-top: rem(25); }
+        }
+        @media screen and (max-width: point(sm)) {
+            &:first-child p { margin-right: rem(20); }
+            &:last-child p { margin-left: rem(20); }
+        }
+
+        .row__image {
+            width: rem(334);
+            flex: 1;
+            @media screen and (max-width: point(sm)) {
+                width: rem(200);
+            }
+
+            > span {
+                width: 100%;
+                height: 100%;
+            }
+
+            img {
+                height: 100% !important;
+                width: 100% !important;
+                max-width: none !important;
+            }
+        }
+    }
+}
+
+.whatScreen__loading {
+    margin-top: rem(140);
+    @media screen and (max-width: point(sm)) {
+        display: none;
+    }
+}

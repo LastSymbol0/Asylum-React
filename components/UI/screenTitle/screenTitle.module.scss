@@ -1,0 +1,25 @@
+@use '../../../assets/styles/index.scss' as *;
+
+.screenTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+
+    div {
+        width: 100%;
+
+        > span {
+            width: 100% !important;
+            left: 50% !important;
+            transform: translateX(-50%) scale(1.1);
+        }
+
+        img {
+            width: 100% !important;
+            height: auto !important;
+            max-height: none !important;
+        }
+    }
+}

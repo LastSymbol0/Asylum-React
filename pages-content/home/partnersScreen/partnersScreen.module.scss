@@ -1,0 +1,135 @@
+@use '../../../assets/styles/index.scss' as *;
+
+.partnersScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: rem(150);
+    padding: 0 rem(350);
+    @media screen and (max-width: point(lg)) {
+        padding: 0 rem(150);
+    }
+    @media screen and (max-width: point(md)) {
+        padding: 0 rem(100);
+    }
+    @media screen and (max-width: point(sm)) {
+        padding: 0 rem(16);
+        margin-top: rem(100);
+    }
+}
+
+.partnersScreen__screenTitle {
+    width: rem(200);
+    @media screen and (max-width: point(sm)) {
+        width: rem(150);
+    }
+}
+
+.partnersScreen__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: rem(100);
+    @media screen and (max-width: point(sm)) {
+        flex-direction: column;
+        margin-top: rem(60);
+    }
+
+    .content__logo {
+        position: relative;
+        &:not(:first-child) {
+            margin-left: rem(108);
+            @media screen and (max-width: point(md)) {
+                margin-left: rem(60);
+            }
+            @media screen and (max-width: point(sm)) {
+                margin-left: 0;
+                margin-top: rem(60);
+            }
+        }
+
+        > span {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            > span {
+                width: 100% !important;
+                height: 100% !important;
+            }
+        }
+
+        &:nth-child(1) {
+            width: rem(250);
+            height: rem(47);
+            @media screen and (max-width: point(sm)) {
+                width: rem(195);
+                height: rem(36);
+            }
+        }
+        &:nth-child(2) {
+            width: rem(200);
+            height: rem(72);
+            @media screen and (max-width: point(sm)) {
+                width: rem(187);
+                height: rem(67);
+            }
+        }
+        &:nth-child(3) {
+            width: rem(226);
+            height: rem(28);
+            @media screen and (max-width: point(sm)) {
+                width: rem(182);
+                height: rem(22);
+            }
+        }
+
+
+        .logo_colored {
+            opacity: 0;
+            transition: opacity .3s ease;
+        }
+        .logo_basic {
+            opacity: 1;
+            transition: opacity .3s ease;
+        }
+
+        &:hover {
+            > .logo_colored {
+                opacity: 1;
+            }
+            > .logo_basic {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.partnersScreen__border {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    margin-top: rem(50);
+    background: linear-gradient(90deg, #BD17FF 0%, #5FA8FF 100%);
+    @media screen and (max-width: point(sm)) {
+        display: none;
+    }
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        width: 3px;
+        height: rem(51);
+        bottom: 100%;
+    }
+
+    &::before {
+        left: 0;
+        background: linear-gradient(180deg, rgba(188, 23, 255, 0) 0%, #BD17FF 100%);
+    }
+    &::after {
+        right: 0;
+        background: linear-gradient(180deg, rgba(95, 168, 255, 0) 0%, #5FA8FF 100%);
+    }
+}

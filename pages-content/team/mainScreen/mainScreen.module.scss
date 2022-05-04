@@ -1,0 +1,90 @@
+@use '../../../assets/styles/index.scss' as *;
+
+.mainScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 rem(350);
+    position: relative;
+    margin-top: rem(200);
+    margin-bottom: rem(200);
+    @media screen and (max-width: point(lg)) {
+        padding: 0 rem(150);
+    }
+    @media screen and (max-width: point(md)) {
+        padding: 0 rem(100);
+    }
+    @media screen and (max-width: point(sm)) {
+        padding: 0 rem(16);
+        margin-top: 0;
+        margin-bottom: rem(100);
+    }
+}
+
+.mainScreen__content {
+    --card-offsetX: #{rem(105)};
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--card-offsetX));
+    width: calc(100% + var(--card-offsetX));
+
+    .content__card {
+        margin-left: var(--card-offsetX);
+        margin-top: rem(34);
+    }
+    @media screen and (max-width: point(sm)) {
+        --card-offsetX: #{rem(14)};
+    }
+}
+
+.mainScreen__screenTitle {
+    margin-top: rem(80);
+    margin-bottom: rem(50);
+    width: rem(150) !important;
+    @media screen and (max-width: point(sm)) {
+        width: rem(100) !important;
+        margin-top: rem(129);
+        margin-bottom: rem(0);
+    }
+}
+
+.mainScreen__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    .backgroundDesktop, .backgroundMobile {
+        width: 100%;
+        height: 100%;
+        > span {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        img {
+            width: 100% !important;
+            height: auto !important;
+            min-height: 100% !important;
+        }
+    }
+
+    .backgroundDesktop {
+        display: block;
+        @media screen and (max-width: point(sm)) {
+            display: none;
+        }
+    }
+
+    .backgroundMobile {
+        display: none;
+        margin-top: rem(150);
+        @media screen and (max-width: point(sm)) {
+            display: block;
+        }
+    }
+}
+
