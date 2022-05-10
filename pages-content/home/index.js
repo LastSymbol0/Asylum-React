@@ -6,6 +6,7 @@ import TeamScreen from "./teamScreen/teamScreen"
 import MaterialsScreen from "./materialsScreen/materialsScreen"
 import PartnersScreen from "./partnersScreen/partnersScreen"
 import ContactScreen from "./contactScreen/contactScreen"
+import CofoundedBy from "./cofoundedBy/cofoundedBy";
 
 const HomeContent = () => {
     return (
@@ -16,6 +17,7 @@ const HomeContent = () => {
             <RoadmapScreen/>
             <TeamScreen/>
             <MaterialsScreen/>
+            <CofoundedBy/>
             <PartnersScreen/>
             <ContactScreen/>
         </>

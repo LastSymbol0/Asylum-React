@@ -211,13 +211,14 @@
                 ]
 
             },
+            "cofounded-by": {
+                "text": "Co-founded by",
+                "title": "supercolony",
+                "link": "https://supercolony.net/"
+            },
             "partners-screen": {
                 "title": "Our partners",
                 "list": [
-                    {
-                        "title": "supercolony",
-                        "link": "https://supercolony.net/"
-                    },
                     {
                         "title": "mempool",
                         "link": "https://www.mempool.ventures/"
@@ -225,6 +226,14 @@
                     {
                         "title": "darwinia",
                         "link": "https://darwinia.network/"
+                    },
+                    {
+                        "title": "evoland",
+                        "link": "https://www.evolution.land/"
+                    },
+                    {
+                        "title": "nitrox",
+                        "link": "https://nitrox.run/"
                     }
                 ]
 

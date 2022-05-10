@@ -39,13 +39,13 @@
     .content__logo {
         position: relative;
         &:not(:first-child) {
-            margin-left: rem(108);
+            margin-left: rem(85);
             @media screen and (max-width: point(md)) {
-                margin-left: rem(60);
+                margin-left: rem(40);
             }
             @media screen and (max-width: point(sm)) {
                 margin-left: 0;
-                margin-top: rem(60);
+                margin-top: rem(45);
             }
         }
 
@@ -61,29 +61,38 @@
         }
 
         &:nth-child(1) {
-            width: rem(250);
-            height: rem(47);
-            @media screen and (max-width: point(sm)) {
-                width: rem(195);
-                height: rem(36);
-            }
-        }
-        &:nth-child(2) {
             width: rem(200);
             height: rem(72);
             @media screen and (max-width: point(sm)) {
-                width: rem(187);
-                height: rem(67);
+                width: rem(127);
+                height: rem(47);
             }
         }
-        &:nth-child(3) {
+        &:nth-child(2) {
             width: rem(226);
             height: rem(28);
             @media screen and (max-width: point(sm)) {
-                width: rem(182);
+                width: rem(142);
+                height: rem(17);
+            }
+        }
+        &:nth-child(3) {
+            width: rem(250);
+            height: rem(45);
+            @media screen and (max-width: point(sm)) {
+                width: rem(155);
                 height: rem(22);
             }
         }
+        &:nth-child(4) {
+            width: rem(125);
+            height: rem(100);
+            @media screen and (max-width: point(sm)) {
+                width: rem(165);
+                height: rem(46);
+            }
+        }
+
 
 
         .logo_colored {

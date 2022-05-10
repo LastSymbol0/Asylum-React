@@ -7,10 +7,12 @@ import ScreenTitle from '../../../components/UI/screenTitle/screenTitle'
 import Image from 'next/image'
 import logoDarwiniaImage from './assets/logo-darwinia.png'
 import logoMempoolImage from './assets/logo-mempool.png'
-import logoSupercolonyImage from './assets/logo-supercolony.png'
 import logoDarwiniaColoredImage from './assets/logo-darwinia-colored.png'
 import logoMempoolColoredImage from './assets/logo-mempool-colored.png'
-import logoSupercolonyColoredImage from './assets/logo-supercolony-colored.png'
+import logoNitroxColoredImage from './assets/logo-nitrox-colored.svg'
+import logoNitroxImage from './assets/logo-nitrox-grey.svg'
+import logoEvoColorImage from './assets/logo-evo-colored.png'
+import logoEvoImage from './assets/logo-evo-grey.png'
 
 const data = {
     "darwinia": {
@@ -21,9 +23,13 @@ const data = {
         basic: logoMempoolImage,
         colored: logoMempoolColoredImage
     },
-    "supercolony": {
-        basic: logoSupercolonyImage,
-        colored: logoSupercolonyColoredImage
+    "evoland": {
+        colored: logoEvoColorImage,
+        basic: logoEvoImage
+    },
+    "nitrox": {
+        colored: logoNitroxColoredImage,
+        basic: logoNitroxImage
     },
 }
 
