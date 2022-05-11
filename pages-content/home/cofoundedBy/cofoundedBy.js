@@ -5,8 +5,8 @@ import { useLocales } from '../../../hooks/useLocales'
 import ScreenTitle from '../../../components/UI/screenTitle/screenTitle'
 
 import Image from 'next/image'
-import logoSupercolonyImage from './assets/logo-supercolony.svg'
-import logoSupercolonyColoredImage from './assets/logo-supercolony-colored.svg'
+import logoSupercolonyImage from './assets/logo-supercolony.png'
+import logoSupercolonyColoredImage from './assets/logo-supercolony-colored.png'
 
 const data = {
     "supercolony": {
