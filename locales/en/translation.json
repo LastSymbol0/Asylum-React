@@ -176,19 +176,23 @@
                 "list": [
                     {
                         "name": "Illia Abrosimov",
-                        "position": "CEO, Co-founder"
+                        "position": "CEO, Co-founder",
+                        "supercolonyMember": false
                     },
                     {
                         "name": "Maria Yaremenko",
-                        "position": "COO, Co-founder"
+                        "position": "COO, Co-founder",
+                        "supercolonyMember": false
                     },
                     {
                         "name": "Danylo Semirazov",
-                        "position": "CTO"
+                        "position": "Supercolony, CTO",
+                        "supercolonyMember": true
                     },
                     {
                         "name": "Markian Ivanichok",
-                        "position": "CEO at Supercolony, Co-founder"
+                        "position": "CEO at Supercolony, Co-founder",
+                        "supercolonyMember": true
                     }
                 ],
                 "cta": {
@@ -268,6 +272,7 @@
                         {
                             "name": "Illia Abrosimov",
                             "position": "CEO, Co-founder",
+                            "supercolonyMember": false,
                             "social": [
                                 {
                                     "name": "twitter",
@@ -282,6 +287,7 @@
                         {
                             "name": "Maria Yaremenko",
                             "position": "COO, Co-founder",
+                            "supercolonyMember": true,
                             "social": [
                                 {
                                     "name": "twitter",
@@ -295,7 +301,8 @@
                         },
                         {
                             "name": "Danylo Semirazov",
-                            "position": "CTO",
+                            "supercolonyMember": true,
+                            "position": "Supercolony, CTO",
                             "social": [
                                 {
                                     "name": "linkedin",
@@ -306,6 +313,7 @@
                         {
                             "name": "Markian Ivanichok",
                             "position": "CEO at Supercolony, Co-founder",
+                            "supercolonyMember": true,
                             "social": [
                                 {
                                     "name": "twitter",
@@ -319,7 +327,8 @@
                         },
                         {
                             "name": "Alina Antropova",
-                            "position": "BD specialist",
+                            "position": "Supercolony, BD specialist",
+                            "supercolonyMember": true,
                             "social": [
                                 {
                                     "name": "twitter",
@@ -334,6 +343,7 @@
                         {
                             "name": "Max Samchevskiy",
                             "position": "Creative designer",
+                            "supercolonyMember": false,
                             "social": [
                                 {
                                     "name": "linkedin",
@@ -344,6 +354,7 @@
                         {
                             "name": "Roman Dyra",
                             "position": "Game designer",
+                            "supercolonyMember": false,
                             "social": [
 
                             ]
@@ -351,12 +362,14 @@
                         {
                             "name": "Illia Okolskyi",
                             "position": "Unity Developer",
+                            "supercolonyMember": false,
                             "social": [
                             ]
                         },
                         {
                             "name": "Horacio Lex",
-                            "position": "Blockchain Developer",
+                            "position": "Supercolony, Blockchain Developer",
+                            "supercolonyMember": true,
                             "social": [
                                 {
                                     "name": "linkedin",
@@ -367,6 +380,7 @@
                         {
                             "name": "Lera Yakovenko",
                             "position": "Recruiter",
+                            "supercolonyMember": false,
                             "social": [
                                 {
                                     "name": "linkedin",
@@ -376,7 +390,8 @@
                         },
                         {
                             "name": "Leonid Nechyporenko",
-                            "position": "Financial engineer",
+                            "position": "Supercolony, Financial engineer",
+                            "supercolonyMember": true,
                             "social": [
                                 {
                                     "name": "linkedin",
@@ -392,6 +407,7 @@
                         {
                             "name": "Olesia Arkhipova",
                             "position": "Strategic advisor",
+                            "supercolonyMember": false,
                             "body": "",
                             "social": [
                                 {
@@ -406,42 +422,13 @@
                         },
                         {
                             "name": "Alexander Kaplaty",
-                            "position": "Financial advisor",
+                            "position": "Supercolony, Financial advisor",
+                            "supercolonyMember": true,
                             "body": "",
                             "social": [
                                 {
                                     "name": "linkedin",
                                     "link": "https://www.linkedin.com/in/kaplaty/"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Ian Arden",
-                            "position": "Strategic advisor",
-                            "body": "",
-                            "social": [
-                                {
-                                    "name": "twitter",
-                                    "link": "https://twitter.com/ciapotti"
-                                },
-                                {
-                                    "name": "linkedin",
-                                    "link": "https://www.linkedin.com/in/ian-arden/"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Nathan Kay",
-                            "position": "Strategic advisor",
-                            "body": "",
-                            "social": [
-                                {
-                                    "name": "twitter",
-                                    "link": "https://twitter.com/NKhrupalo"
-                                },
-                                {
-                                    "name": "linkedin",
-                                    "link": "https://www.linkedin.com/in/nathan-kkk/"
                                 }
                             ]
                         }
