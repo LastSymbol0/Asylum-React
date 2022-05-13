@@ -62,6 +62,7 @@ const MainScreen = () => {
                         name={ _.name }
                         position={ _.position }
                         social={ _.social }
+                        supercolonyMember={_.supercolonyMember}
                     />
                 ))}
             </div>
@@ -76,6 +77,7 @@ const MainScreen = () => {
                         position={ _.position }
                         social={ _.social }
                         description={ _.body }
+                        supercolonyMember={_.supercolonyMember}
                     />
                 ))}
             </div>

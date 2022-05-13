@@ -8,6 +8,7 @@
     z-index: 1;
     @media screen and (max-width: point(sm)) {
         width: rem(148);
+        padding-left: 10px;
     }
 }
 
@@ -42,8 +43,27 @@
     }
 }
 
-.personCard__title {
-    white-space: nowrap;
+.personCard{
+    &__titleBlock{
+        position: relative;
+    }
+
+    &__title {
+        white-space: nowrap;
+        position: relative;
+    }
+    &__supercolonyLogo{
+        width: 70px;
+        position: absolute;
+        height: 35px;
+        left: -55px;
+        top: rem(30);
+        @media screen and (max-width: point(sm)) {
+            width: 55px;
+            left: -42px;
+            top: rem(13);
+        }
+    }
 }
 .personCard__title, .personCard__description {
     @include font-ubuntu-regular;
@@ -52,6 +72,7 @@
     text-align: center;
     @media screen and (max-width: point(sm)) {
         margin-top: rem(15);
+        font-size: font(14);
     }
 }
 
@@ -61,8 +82,12 @@
     margin-top: rem(12);
     text-align: center;
     max-width: 195px;
+    @media screen and (max-width: point(md)) {
+        max-width: 135px;
+    }
     @media screen and (max-width: point(sm)) {
         margin-top: rem(10);
+        font-size: font(14);
     }
 }
 

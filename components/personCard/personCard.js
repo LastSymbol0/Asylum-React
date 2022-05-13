@@ -3,6 +3,7 @@ import cn from 'classnames'
 
 import Image from 'next/image'
 import Icons from '../UI/icons/icons'
+import sclogo from '../../pages-content/team/mainScreen/assets/SClogo.svg';
 
 const Social = ({ social }) => {
     if (!social) { return <></> }
@@ -35,6 +36,7 @@ const PersonCard = ({
     position,
     social,
     description,
+    supercolonyMember,
     ...props 
 }) => {
 
@@ -48,7 +50,18 @@ const PersonCard = ({
                 }
                 <Image priority={true} src={avatar} alt="" />
             </div>
-            <p className={styles.personCard__title}>{ name }</p>
+            <div className={styles.personCard__titleBlock}>
+                <p className={styles.personCard__title}>
+                    { name }
+                </p>
+                {
+                    supercolonyMember ? <div className={styles.personCard__supercolonyLogo}>
+                        <Image layout="fill" src={sclogo}  priority={true} alt='sc-logo'/>
+                    </div> : null
+                }
+
+            </div>
+
             <p className={styles.personCard__position}>{ position }</p>
             <Social social={social || null}/>
             {description && 

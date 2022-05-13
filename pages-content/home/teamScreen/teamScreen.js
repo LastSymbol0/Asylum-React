@@ -39,6 +39,7 @@ const TeamScreen = () => {
                                 background={ linesImage }
                                 name={ _.name }
                                 position={ _.position }
+                                supercolonyMember={_.supercolonyMember}
                             />
                         ))}
                     </div>
