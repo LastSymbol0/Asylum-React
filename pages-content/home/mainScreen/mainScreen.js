@@ -23,6 +23,10 @@ const mainScreen = () => {
                         link={ locale.cta[0].link }
                         label="outlineGradient"
                         type="big"
+                        onClick={(e) => {
+                            e.preventDefault()
+                            scrollTo('#materials')
+                        }}
                     >
                         { locale.cta[0].title }
                     </Button>
