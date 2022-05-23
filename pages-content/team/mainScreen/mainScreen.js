@@ -23,8 +23,8 @@ import Lera from './assets/avatars/Lera.jpg'
 import IlliaOk from './assets/avatars/IlliaOkolsk.jpg'
 
 import Olesia from './assets/avatars/Olesia.jpg'
-import Ian from './assets/avatars/Ian.jpg'
-import Nathan from './assets/avatars/Nathan.jpg'
+import Kyrylo from './assets/avatars/Kyrylo.jpeg'
+
 
 
 const avatarsMembers = {
@@ -38,14 +38,12 @@ const avatarsMembers = {
     "Illia Okolskyi": IlliaOk,
     "Horacio Lex": Horacio,
     "Lera Yakovenko": Lera,
-    "Leonid Nechyporenko": Leo,
 }
 
 const avatarsAdvisors = {
     "Olesia Arkhipova": Olesia,
     "Alexander Kaplaty": Alexander,
-    "Ian Arden": Ian,
-    "Nathan Kay": Nathan
+    "Kyrylo Nagorny": Kyrylo,
 }
 
 const MainScreen = () => {
