@@ -197,7 +197,7 @@
             right: calc(100% + var(--block-circle-13-translate));
             &::before {
                 width: calc(var(--block-circle-13-translate) + rem(10));
-                left: 95%;
+                left: 90%;
             }
         }
     }
@@ -213,7 +213,7 @@
             left: calc(100% + var(--block-circle-24-translate));
             &::before {
                 width: calc(var(--block-circle-24-translate) + rem(10));
-                right: 95%;
+                right: 90%;
             }
         }
     }
