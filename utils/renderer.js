@@ -1,7 +1,7 @@
 /**
  * @author Den Kravchu <denkravchu@gmail.com>
  * @fileoverview Small library which makes work with coordinates faster and easier. Animate your website supafast!
- * @version 2.0.0_draft
+ * @version entrypoint.0.0_draft
  */
 
 export default {
@@ -22,9 +22,9 @@ export default {
     },
     getScrollCoordsFromElement(domElement) {
         const domElementCoords = this.getElementCoords(domElement)
-        if (domElementCoords === 'error') { 
+        if (domElementCoords === 'error') {
             console.error("getScrollCoordsFromElement: No domElement found")
-            return { windowTop: null, windowBottom: null } 
+            return { windowTop: null, windowBottom: null }
         }
         return {
             windowTop: {
@@ -60,9 +60,9 @@ export default {
     // todo: добавить возможность получения координат относительно любого угла
     getMouseCoordsFromElement(domElement) {
         const domElementCoords = this.getElementCoords(domElement)
-        if (domElementCoords === 'error') { 
+        if (domElementCoords === 'error') {
             console.error("getMouseCoordsFromElement: No domElement found")
-            return {} 
+            return {}
         }
         const mouseCoords = this.getMouseDocumentCoords()
         return {
@@ -72,9 +72,9 @@ export default {
     },
     getMouseCoordsFromElementCorner(domElement) {
         const domElementCoords = this.getElementCoords(domElement)
-        if (domElementCoords === 'error') { 
+        if (domElementCoords === 'error') {
             console.error("getMouseCoordsFromElementCorner: No domElement found")
-            return {} 
+            return {}
         }
         const mouseCoords = this.getMouseDocumentCoords()
         return {
@@ -86,34 +86,34 @@ export default {
     // todo: сделать, чтобы возвращался объект по вертикали и горизонтали типо { part: { x: true, y: false }, full: ... }
     isElementVisible(domElement) {
         const domElementCoords = this.getElementCoords(domElement)
-        if (domElementCoords === 'error') { 
+        if (domElementCoords === 'error') {
             console.error("isElementVisible: No domElement found")
-            return false 
+            return false
         }
         return (domElementCoords.bottom >= window.scrollY && domElementCoords.top <= window.scrollY + window.innerHeight)
     },
     isElementVisibleX(domElement) {
         const domElementCoords = this.getElementCoords(domElement)
-        if (domElementCoords === 'error') { 
+        if (domElementCoords === 'error') {
             console.error("isElementVisibleX: No domElement found")
-            return false 
+            return false
         }
         return (domElementCoords.right >= 0 && domElementCoords.left <= window.innerWidth)
     },
     isElementFullyVisible(domElement) {
         const domElementCoords = this.getElementCoords(domElement)
-        if (domElementCoords === 'error') { 
+        if (domElementCoords === 'error') {
             console.error("isElementFullyVisible: No domElement found")
-            return false 
+            return false
         }
         return (domElementCoords.bottom <= window.scrollY + window.innerHeight && domElementCoords.top >= window.scrollY)
     },
 
     isElementHovered(domElement, additionalRadius = 0) {
         const domElementCoords = this.getElementCoords(domElement)
-        if (domElementCoords === 'error') { 
+        if (domElementCoords === 'error') {
             console.error("isElementHovered: No domElement found")
-            return false 
+            return false
         }
         const mouseCoords = this.getMouseDocumentCoords()
         return (domElementCoords.top - additionalRadius < mouseCoords.y && domElementCoords.bottom + additionalRadius > mouseCoords.y && domElementCoords.left - additionalRadius < mouseCoords.x && domElementCoords.right + additionalRadius > mouseCoords.x)
@@ -123,7 +123,7 @@ export default {
         domElement.addEventListener('mousemove', function(event) {
             this.mouse = event
             domElement.dispatchEvent(new CustomEvent("mouseupdate", {
-                bubbles: true, 
+                bubbles: true,
                 detail: {
                     documentCoords: this.getMouseDocumentCoords(),
                     windowCoords: this.getMouseWindowCoords(),
@@ -133,7 +133,7 @@ export default {
         domElement.addEventListener('mouseenter', function(event) {
             this.mouse = event
             domElement.dispatchEvent(new CustomEvent("mouseupdate", {
-                bubbles: true, 
+                bubbles: true,
                 detail: {
                     documentCoords: this.getMouseDocumentCoords(),
                     windowCoords: this.getMouseWindowCoords(),
@@ -165,12 +165,12 @@ export default {
         toRender.rendering = function(time) {
             if (time - this.startTime >= this.renderDelay) {
                 this.startTime = performance.now()
-                if (window.innerWidth <= this.breakpoint) { 
+                if (window.innerWidth <= this.breakpoint) {
                     if (this.readyForBreakpointCallback && this.onBreakpoint) {
-                        this.onBreakpoint() 
+                        this.onBreakpoint()
                         this.readyForBreakpointCallback = false
                     }
-                    return 
+                    return
                 }
                 this.handler.apply(this.context, [...this.props || [], time])
                 this.readyForBreakpointCallback = true

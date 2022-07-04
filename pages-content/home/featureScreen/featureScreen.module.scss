@@ -1,60 +1,57 @@
 @use '../../../assets/styles/index.scss' as *;
 
 .featureScreen {
-    width: 100%;
-    margin-top: rem(160);
-    padding: 0 rem(350);
-    @media screen and (max-width: point(lg)) {
-        padding: 0 rem(150);
-    }
-    @media screen and (max-width: point(md)) {
-        padding: 0 rem(100);
-    }
-    @media screen and (max-width: point(sm)) {
-        padding: 0 rem(16);
-        margin-top: rem(40);
-    }
+  width: 100%;
+  margin-top: rem(160);
+  padding: 0 rem(350);
+  @media screen and (max-width: point(lg)) {
+    padding: 0 rem(150);
+  }
+  @media screen and (max-width: point(md)) {
+    padding: 0 rem(100);
+  }
+  @media screen and (max-width: point(sm)) {
+    padding: 0 rem(16);
+    margin-top: rem(40);
+  }
 }
 
 .featureScreen__screenTitle {
-    width: rem(160);
-    @media screen and (max-width: point(sm)) {
-        width: rem(100);
-    }
+  width: rem(160);
+  @media screen and (max-width: point(sm)) {
+    width: rem(100);
+  }
 }
 
 .featureScreen__content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .featureScreen__tabs {
-    --tab-offsetY: #{rem(50)};
-    --tab-offsetX: #{rem(35)};
-    --tab-marginY: #{rem(85)};
+  --tab-offsetY: #{rem(50)};
+  --tab-offsetX: #{rem(35)};
+  --tab-marginY: #{rem(85)};
 
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    max-width: rem(1100);
-    margin-top: calc(var(--tab-marginY) - var(--tab-offsetY));
-    margin-left: calc(-1 * var(--tab-offsetX));
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: rem(1100);
+  margin-top: calc(var(--tab-marginY) - var(--tab-offsetY));
+  margin-left: calc(-1 * var(--tab-offsetX));
 
-    > * {
-        margin-left: var(--tab-offsetX);
-        margin-top: var(--tab-offsetY);
-    }
+  > * {
+    margin-left: var(--tab-offsetX);
+    margin-top: var(--tab-offsetY);
+  }
 
-    @media screen and (max-width: point(sm)) {
-        --tab-offsetY: #{rem(15)};
-        --tab-offsetX: #{rem(13)};
-        --tab-marginY: #{rem(28)};
-        width: rem(350);
-        // > :nth-child(1) { order: -1 }
-        // > :nth-child(4) { order: -2 }
-        // > :nth-child(5) { order: -3 }
-    }
+  @media screen and (max-width: point(sm)) {
+    --tab-offsetY: #{rem(15)};
+    --tab-offsetX: #{rem(13)};
+    --tab-marginY: #{rem(28)};
+    width: rem(350);
+  }
 }

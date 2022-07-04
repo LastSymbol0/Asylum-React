@@ -1,247 +1,258 @@
 @use '../../../assets/styles/index.scss' as *;
 
 .roadmapScreen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: rem(120);
-    padding: 0 rem(350);
-    @media screen and (max-width: point(lg)) {
-        padding: 0 rem(150);
-    }
-    @media screen and (max-width: point(md)) {
-        padding: 0 rem(100);
-    }
-    @media screen and (max-width: point(sm)) {
-        padding: 0 rem(16);
-        margin-top: 0;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: rem(120);
+  padding: 0 rem(350);
+  @media screen and (max-width: point(lg)) {
+    padding: 0 rem(150);
+  }
+  @media screen and (max-width: point(md)) {
+    padding: 0 rem(100);
+  }
+  @media screen and (max-width: point(sm)) {
+    padding: 0 rem(16);
+    margin-top: 0;
+  }
 }
 
 .roadmapScreen__screenTitle {
-    width: rem(160);
-    @media screen and (max-width: point(sm)) {
-        width: rem(100);
-    }
+  width: rem(160);
+  @media screen and (max-width: point(sm)) {
+    width: rem(100);
+  }
 }
 
 .roadmapScreen__content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: rem(300) 0;
-    @media screen and (max-width: point(sm)) {
-        padding: rem(130) 0;
-    }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: rem(300) 0;
+  @media screen and (max-width: point(sm)) {
+    padding: rem(130) 0;
+  }
 }
 
 .roadmapScreen__background {
-    position: absolute;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  > * {
     width: 100%;
     height: 100%;
-    z-index: -1;
 
-    > * {
-        width: 100%;
-        height: 100%;
+    > span {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
 
-        > span {
-            width: 100% !important;
-            height: 100% !important;
-        }
+  .backgroundDesktop {
+    display: block;
+    @media screen and (max-width: point(sm)) {
+      display: none;
     }
+  }
 
-    .backgroundDesktop {
-        display: block;
-        @media screen and (max-width: point(sm)) {
-            display: none;
-        }
+  .backgroundMobile {
+    display: none;
+    @media screen and (max-width: point(sm)) {
+      display: block;
     }
-    .backgroundMobile {
-        display: none;
-        @media screen and (max-width: point(sm)) {
-            display: block;
-        }
-    }
+  }
 }
 
 .roadmapScreen__scheme {
-    margin-top: rem(31);
-    width: 100%;
+  margin-top: rem(31);
+  width: 100%;
+  display: grid;
+  gap: rem(25) rem(50);
+  grid-template-columns: repeat(2, 1fr);
+
+  @media screen and (max-width: point(md)) {
+    gap: rem(25) rem(30);
+  }
+
+
+  @media screen and (max-width: point(sm)) {
+    margin-top: rem(18);
+    grid-template-columns: 1fr;
+    gap: rem(10);
+  }
+
+  .scheme__row {
+    display: flex;
+    flex-direction: column;
+    gap: rem(30);
+    align-items: center;
+
+    @media screen and (min-width: point(sm)) {
+      justify-self: end;
+
+      &:nth-child(even) {
+        justify-self: start;
+        margin-top: rem(70);
+      }
+
+      &:last-child {
+        margin-top: rem(-35);
+        margin-left: rem(50);
+      }
+    }
+  }
+
+
+  .scheme__block {
+    position: relative;
+    padding: rem(30);
+    z-index: 2;
+    @media screen and (max-width: point(md)) {
+      padding: rem(20);
+    }
     @media screen and (max-width: point(sm)) {
-        margin-top: rem(18);
+      padding: rem(14);
+      width: rem(190);
     }
 
-    .scheme__row {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    pre {
+      @include font-ubuntu-regular;
+      font-size: font(18);
+      line-height: 130%;
+      max-width: rem(252);
+      @media screen and (max-width: point(sm)) {
+        @include font-ubuntu-light;
+        font-size: font(12);
+        max-width: rem(190);
+      }
+    }
 
-        &:not(:first-child) {
-            margin-top: rem(50);
-        }
-        &:nth-child(4) {
-            margin-top: rem(20);
-        }
-        &:nth-child(5) {
-            margin-top: rem(10);
-        }
+    > span {
+      position: absolute !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%);
+      width: 100% !important;
+      height: 100% !important;
+      z-index: -1;
+    }
 
+    .block__circle {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      @include font-oxanium-medium;
+      font-size: font(36);
+      text-transform: uppercase;
+      z-index: -2;
+      background-color: color(dark100);
+      border-radius: 50%;
+      padding: rem(20);
+      @media screen and (max-width: point(sm)) {
+        transform: translateY(0);
+        top: rem(10);
+        font-size: font(14);
+        padding: rem(8);
+      }
+
+      > span {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%);
+        width: 100% !important;
+        height: 100% !important;
+        min-width: 100% !important;
+        min-height: 100% !important;
+        z-index: -1;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        background-color: color(light100);
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -2;
         @media screen and (max-width: point(sm)) {
-            &:not(:first-child) {
-                margin-top: rem(10) !important;
-            }
+          display: none;
         }
+      }
+    }
+  }
+
+  .scheme__scheme {
+    width: rem(200);
+    height: rem(200);
+    @media screen and (max-width: point(sm)) {
+      display: none;
     }
 
-    .scheme__block {
-        position: relative;
-        padding: rem(30);
-        z-index: 2;
-        @media screen and (max-width: point(sm)) {
-            padding: rem(14);
-            width: rem(190);
-        }
-
-        p {
-            @include font-ubuntu-regular;
-            font-size: font(18);
-            line-height: 130%;
-            max-width: rem(252);
-            @media screen and (max-width: point(sm)) {
-                @include font-ubuntu-light;
-                font-size: font(12);
-                max-width: rem(190);
-            }
-        }
-
-        > span {
-            position: absolute !important; 
-            top: 50% !important; left: 50% !important;
-            transform: translate(-50%, -50%);
-            width: 100% !important;
-            height: 100% !important;
-            z-index: -1;
-        }
-
-        .block__circle {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            @include font-oxanium-medium;
-            font-size: font(36);
-            text-transform: uppercase;
-            z-index: -2;
-            background-color: color(dark100);
-            border-radius: 50%;
-            padding: rem(20);
-            @media screen and (max-width: point(sm)) {
-                transform: translateY(0);
-                top: rem(10);
-                font-size: font(14);
-                padding: rem(8);
-            }
-
-            > span {
-                position: absolute !important; 
-                top: 50% !important; left: 50% !important;
-                transform: translate(-50%, -50%);
-                width: 100% !important;
-                height: 100% !important;
-                min-width: 100% !important;
-                min-height: 100% !important;
-                z-index: -1;
-            }
-
-            &::before {
-                content: '';
-                position: absolute;
-                height: 2px;
-                background-color: color(light100);
-                top: 50%;
-                transform: translateY(-50%);
-                z-index: -2;
-                @media screen and (max-width: point(sm)) {
-                    display: none;
-                }
-            }
-        }
+    > span {
+      width: 100% !important;
+      height: 100% !important;
     }
-
-    .scheme__scheme {
-        width: rem(200);
-        height: rem(200);
-        @media screen and (max-width: point(sm)) {
-            display: none;
-        }
-
-        > span {
-            width: 100% !important;
-            height: 100% !important;
-        }
-    }
+  }
 }
 
 
 .roadmapScreen__scheme .scheme__row {
-    --block-circle-13-translate: #{rem(60)};
-    --block-circle-24-translate: #{rem(110)};
+  --block-circle-13-translate: #{rem(60)};
+  --block-circle-24-translate: #{rem(110)};
 
-    &:nth-child(1), &:nth-child(3) {
-        .scheme__block { margin-right: rem(142); }
-        .block__circle {
-            right: calc(100% + var(--block-circle-13-translate));
-            &::before {
-                width: calc(var(--block-circle-13-translate) + rem(10));
-                left: 90%;
-            }
-        }
-    }
+  @media screen and (max-width: point(md)) {
+    --block-circle-13-translate: #{rem(30)};
+    --block-circle-24-translate: #{rem(55)};
 
-    &:nth-child(2), &:nth-child(4) {
-        flex-direction: row-reverse;
-        justify-content: flex-start;
-        .scheme__block { 
-            margin-left: rem(85); 
-            margin-right: 30%;
-        }
-        .block__circle {
-            left: calc(100% + var(--block-circle-24-translate));
-            &::before {
-                width: calc(var(--block-circle-24-translate) + rem(10));
-                right: 90%;
-            }
-        }
-    }
+  }
 
-    &:nth-child(5) {
-        .scheme__block { margin-right: rem(-500); }
-        .block__circle {
-            right: calc(100% + var(--block-circle-13-translate));
-            &::before {
-                width: calc(var(--block-circle-13-translate) + rem(10));
-                left: 95%;
-            }
-        }
-    }
+  &:nth-child(odd) {
 
-    @media screen and (max-width: point(sm)) {
-        --block-mobile-translate: #{rem(21)};
-        &:nth-child(n + 1) {
-            flex-direction: row !important;
-            justify-content: center !important;
-            .scheme__block {
-                margin-right: 0 !important;
-                margin-left: 0 !important;
-            }
-            .block__circle {
-                right: calc(100% + var(--block-mobile-translate)) !important;
-                left: auto !important;
-            }
-        }
+    .block__circle {
+      right: calc(100% + var(--block-circle-13-translate));
+
+      &::before {
+        width: calc(var(--block-circle-13-translate) + rem(10));
+        left: 90%;
+      }
     }
+  }
+
+  &:nth-child(even) {
+
+
+    .block__circle {
+      left: calc(100% + var(--block-circle-24-translate));
+
+      &::before {
+        width: calc(var(--block-circle-24-translate) + rem(10));
+        right: 90%;
+      }
+    }
+  }
+  
+  @media screen and (max-width: point(sm)) {
+    --block-mobile-translate: #{rem(21)};
+    &:nth-child(n + 1) {
+      flex-direction: row !important;
+      justify-content: center !important;
+
+      .scheme__block {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+      }
+
+      .block__circle {
+        right: calc(100% + var(--block-mobile-translate)) !important;
+        left: auto !important;
+      }
+    }
+  }
 }

@@ -1,6 +1,5 @@
 import styles from './roadmapScreen.module.scss'
-import cn from 'classnames'
-import { useLocales } from '../../../hooks/useLocales'
+import {useLocales} from '../../../hooks/useLocales'
 
 import ScreenTitle from '../../../components/UI/screenTitle/screenTitle'
 
@@ -14,8 +13,8 @@ import block4Image from './assets/block-4.png'
 import block5Image from './assets/block-5.png'
 import circleImage from './assets/circle.png'
 import scheme1Image from './assets/scheme-1.png'
-import scheme2Image from './assets/scheme-2.png'
-import scheme3Image from './assets/scheme-3.png'
+import scheme3Image from './assets/scheme-2.png'
+import scheme6Image from './assets/scheme-3.png'
 
 const data = [
     {
@@ -27,15 +26,17 @@ const data = [
     },
     {
         block: block3Image,
-        scheme: scheme2Image
+        scheme: scheme3Image
     },
     {
         block: block4Image,
-        scheme: scheme3Image
     },
     {
         block: block5Image,
     },
+    {
+        scheme: scheme6Image
+    }
 ]
 
 const RoadmapScreen = () => {
@@ -43,25 +44,29 @@ const RoadmapScreen = () => {
     return (
         <div id="roadmap" className={styles.roadmapScreen}>
             <div className={styles.roadmapScreen__content}>
-                <ScreenTitle className={styles.roadmapScreen__screenTitle}>{ locale.title }</ScreenTitle>
+                <ScreenTitle className={styles.roadmapScreen__screenTitle}>{locale.title}</ScreenTitle>
                 <div className={styles.roadmapScreen__scheme}>
-                    {locale.stages.map((_, i) => (
-                        <div key={i} className={styles.scheme__row}>
-                            <div className={styles.scheme__block}>
-                                {_.list.map(text => <p key={text + i}>{ text }</p>)}
-                                <Image src={data[i].block} priority={true} alt="" />
-                                <div className={styles.block__circle}>
-                                    { _.title }
-                                    <Image src={circleImage} priority={true} alt="" />
-                                </div>
+                    {data.map((data, index) => {
+                        const stage = locale.stages[index]
+                        console.log(stage)
+                        return (
+                            <div key={index} className={styles.scheme__row}>
+                                {stage && <div className={styles.scheme__block}>
+                                    {stage.list.map((text, index) => <pre key={index}>{text}</pre>)}
+                                    <Image src={data.block} priority={true} alt=""/>
+                                    <div className={styles.block__circle}>
+                                        {stage.title}
+                                        <Image src={circleImage} priority={true} alt=""/>
+                                    </div>
+                                </div>}
+                                {data.scheme &&
+                                    <div className={styles.scheme__scheme}>
+                                        <Image src={data.scheme} priority={true} alt=""/>
+                                    </div>
+                                }
                             </div>
-                            { data[i].scheme && 
-                                <div className={styles.scheme__scheme}>
-                                    <Image src={data[i].scheme} priority={true} alt="" />
-                                </div>
-                            }
-                        </div>
-                    ))}
+                        )
+                    })}
                 </div>
                 <div className={styles.roadmapScreen__background}>
                     <div className={styles.backgroundDesktop}>

@@ -25,8 +25,8 @@ html {
 html {
     scrollbar-color: colors.color(dark100) #BD17FF;
     scrollbar-width: thin;
-    ::-webkit-scrollbar { 
-        width: 4px; height: 4px; 
+    ::-webkit-scrollbar {
+        width: 4px; height: 4px;
         -webkit-appearance: none;
     }
     ::-webkit-scrollbar-track { background-color: colors.color(dark100); }
@@ -34,8 +34,8 @@ html {
     color: colors.color(light100);
     // scroll-behavior: smooth;
     @media screen and (max-width: point(sm)) {
-        ::-webkit-scrollbar { 
-            width: 1px; height: 1px; 
+        ::-webkit-scrollbar {
+            width: 1px; height: 1px;
             -webkit-appearance: none;
         }
     }
@@ -91,4 +91,13 @@ h2 {
     @media screen and (max-width: grid.point(sm)) {
         font-size: fonts.font(18);
     }
+}
+
+.swiper {
+    overflow-y: visible !important;
+    overflow-x: clip !important;
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+    overflow-x: clip;
 }
