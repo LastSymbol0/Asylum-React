@@ -21,6 +21,7 @@ import IlliaOk from './assets/avatars/IlliaOkolsk.jpg'
 
 import Olesia from './assets/avatars/Olesia.jpg'
 import Kyrylo from './assets/avatars/Kyrylo.jpeg'
+import Oleh from './assets/avatars/Oleh.jpg'
 
 const avatarsMembers = {
   'Illia Abrosimov': Illia,
@@ -34,6 +35,7 @@ const avatarsMembers = {
   'Lera Yakovenko': Lera,
   'Alexander Kaplaty': Alexander,
   'Kyrylo Nagorny': Kyrylo,
+  'Oleh Kulykovskyi': Oleh,
 }
 
 const avatarsAdvisors = {
