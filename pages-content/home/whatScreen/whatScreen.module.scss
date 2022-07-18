@@ -1,111 +1,109 @@
 @use '../../../assets/styles/index.scss' as *;
 
 .whatScreen {
+  margin: rem(80) rem(20) 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: rem(30);
+  align-items: center;
+
+  @media screen and (min-width: point(sm)) {
+    padding: 0 rem(90);
+  }
+
+  @media screen and (min-width: point(md)) {
+    padding: 0 rem(120);
+  }
+
+  @media screen and (min-width: point(lg)) {
+    padding: 0 rem(180);
+  }
+
+  .rows {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: rem(150);
-    padding: 0 rem(350);
-    @media screen and (max-width: point(lg)) {
-        padding: 0 rem(150);
-    }
-    @media screen and (max-width: point(md)) {
-        padding: 0 rem(100);
-    }
-    @media screen and (max-width: point(sm)) {
-        padding: 0 rem(16);
-        margin-top: rem(50);
-    }
-}
+    align-items: stretch;
+    justify-content: space-between;
+    font-size: font(11);
+    line-height: 190%;
+    text-align: justify;
+    @include font-ubuntu-regular;
 
-.whatScreen__content {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: rem(38) rem(70);
+    @media screen and (min-width: point(sm)) {
+      margin: rem(30) rem(30) rem(100);
+      gap: rem(400);
+      font-size: font(16);
+      line-height: 200%;
+      text-align: unset;
+    }
 
-    .content__background {
+    @media screen and (min-width: point(md)) {
+      margin: rem(110) rem(30) rem(220);
+      gap: rem(750);
+    }
+
+    @media screen and (min-width: point(lg)) {
+      gap: rem(1100);
+      font-size: font(18);
+    }
+
+    .background {
+      position: relative;
+      @media screen and (min-width: point(sm)) {
         position: absolute;
-        top: 0; left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-
-        > span {
-            width: 100% !important;
-            height: 100% !important;
-        }
+        top: 0;
+        left: 0;
+      }
     }
 
-    .content__rows {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        @media screen and (max-width: point(md)) {
-            margin-top: rem(25);
-        }
+    .sledman {
+      z-index: 1;
+      position: absolute;
+      width: 15%;
+      animation-name: slide;
+      animation-play-state: paused;
+      animation-duration: 1.5s;
+      animation-fill-mode: forwards;
+      top: 35%;
+      left: 45%;
+      transform: rotate(-0.1turn) scale(0.6) translate(50%);
+
+      &.running {
+        animation-play-state: running;
+      }
     }
 
-    .content__row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        &:last-child { flex-direction: row-reverse; }
-
-        p {
-            @include font-ubuntu-regular;
-            font-size: font(18);
-            line-height: 189%;
-            max-width: rem(498);
-            @media screen and (max-width: point(sm)) {
-                font-size: font(11);
-                max-width: rem(137);
-            }
-        }
-
-        &:first-child p { margin-right: rem(146); }
-        &:last-child p { margin-left: rem(90); text-align: right; }
-        @media screen and (max-width: point(md)) {
-            &:first-child p { margin-right: rem(60); }
-            &:last-child p { margin-left: rem(60); }
-            &:last-child { margin-top: rem(25); }
-        }
-        @media screen and (max-width: point(sm)) {
-            &:first-child p { margin-right: rem(20); }
-            &:last-child p { margin-left: rem(20); }
-        }
-
-        .row__image {
-            width: rem(334);
-            flex: 1;
-            @media screen and (max-width: point(sm)) {
-                width: rem(200);
-            }
-
-            > span {
-                width: 100%;
-                height: 100%;
-            }
-
-            img {
-                height: 100% !important;
-                width: 100% !important;
-                max-width: none !important;
-            }
-        }
+    @keyframes slide {
+      to {
+        top: 45%;
+        left: 40%;
+        transform: inherit;
+      }
     }
-}
 
-.whatScreen__loading {
-    margin-top: rem(140);
-    @media screen and (max-width: point(sm)) {
-        display: none;
+    .row {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: rem(20);
+
+      @media screen and (min-width: point(sm)) {
+        font-size: font(18);
+        width: 48%;
+
+        &:last-child {
+          text-align: right;
+          align-self: end;
+        }
+      }
     }
+  }
+
+  .loading {
+    display: none;
+    @media screen and (min-width: point(sm)) {
+      display: block;
+    }
+  }
 }

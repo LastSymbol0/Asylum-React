@@ -308,7 +308,7 @@
             },
             {
               "name": "Markian Ivanichok",
-              "position": "CEO at Supercolony, Co-founder",
+              "position": "CGO, Co-founder, CEO at Supercolony",
               "supercolonyMember": true,
               "social": [
                 {
@@ -318,6 +318,30 @@
                 {
                   "name": "linkedin",
                   "link": "https://www.linkedin.com/in/0xmarkian/"
+                }
+              ]
+            },
+            {
+              "name": "Alexander Kaplaty",
+              "position": "Supercolony, CFO",
+              "supercolonyMember": true,
+              "body": "",
+              "social": [
+                {
+                  "name": "linkedin",
+                  "link": "https://www.linkedin.com/in/kaplaty/"
+                }
+              ]
+            },
+            {
+              "name": "Kyrylo Nagorny",
+              "position": "Supercolony, CMO",
+              "supercolonyMember": true,
+              "body": "",
+              "social": [
+                {
+                  "name": "linkedin",
+                  "link": "https://www.linkedin.com/in/%D0%BD%D0%B0%D0%B3%D0%BE%D1%80%D0%BD%D1%8B%D0%B9-%D0%BA%D0%B8%D1%80%D0%B8%D0%BB%D0%BB-3bb2276a/"
                 }
               ]
             },
@@ -373,30 +397,6 @@
                 {
                   "name": "linkedin",
                   "link": "https://www.linkedin.com/in/lera-yakovenko-834691235/"
-                }
-              ]
-            },
-            {
-              "name": "Alexander Kaplaty",
-              "position": "Supercolony, Financial advisor",
-              "supercolonyMember": true,
-              "body": "",
-              "social": [
-                {
-                  "name": "linkedin",
-                  "link": "https://www.linkedin.com/in/kaplaty/"
-                }
-              ]
-            },
-            {
-              "name": "Kyrylo Nagorny",
-              "position": "Supercolony, Marketing advisor",
-              "supercolonyMember": true,
-              "body": "",
-              "social": [
-                {
-                  "name": "linkedin",
-                  "link": "https://www.linkedin.com/in/%D0%BD%D0%B0%D0%B3%D0%BE%D1%80%D0%BD%D1%8B%D0%B9-%D0%BA%D0%B8%D1%80%D0%B8%D0%BB%D0%BB-3bb2276a/"
                 }
               ]
             },
