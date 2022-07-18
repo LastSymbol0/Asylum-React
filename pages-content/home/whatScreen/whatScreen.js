@@ -35,9 +35,19 @@ const WhatScreen = () => {
               inView ? styles.running : null
             )}
           >
-            <Image priority={true} src={sledman} alt='sledman' />
+            <Image
+              loading='eager'
+              priority={true}
+              src={sledman}
+              alt='sledman'
+            />
           </div>
-          <Image priority={true} src={backgroundImage} alt='castle' />
+          <Image
+            loading='eager'
+            priority={true}
+            src={backgroundImage}
+            alt='castle'
+          />
         </div>
         <div className={styles.row}>
           {locale.body[1].split('\n').map((textpart, index) => (
