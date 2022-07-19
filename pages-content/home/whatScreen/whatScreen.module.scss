@@ -9,15 +9,17 @@
   align-items: center;
 
   @media screen and (min-width: point(sm)) {
-    padding: 0 rem(90);
-  }
-
-  @media screen and (min-width: point(md)) {
     padding: 0 rem(120);
   }
 
+  @media screen and (min-width: point(md)) {
+    margin: rem(80) rem(60) 0;
+    padding: 0 rem(170) 0 rem(130);
+  }
+
   @media screen and (min-width: point(lg)) {
-    padding: 0 rem(180);
+    margin: rem(80) rem(200) 0;
+    padding: 0 rem(140);
   }
 
   .rows {
@@ -31,7 +33,7 @@
     @include font-ubuntu-regular;
 
     @media screen and (min-width: point(sm)) {
-      margin: rem(30) rem(30) rem(100);
+      margin: rem(20) rem(0) rem(100);
       gap: rem(400);
       font-size: font(16);
       line-height: 200%;
@@ -39,12 +41,12 @@
     }
 
     @media screen and (min-width: point(md)) {
-      margin: rem(110) rem(30) rem(220);
-      gap: rem(750);
+      margin: rem(80) rem(0) rem(150);
+      gap: rem(640);
     }
 
     @media screen and (min-width: point(lg)) {
-      gap: rem(1100);
+      gap: rem(760);
       font-size: font(18);
     }
 
