@@ -2,7 +2,7 @@ import styles from './whatScreen.module.scss'
 import { useLocales } from '../../../hooks/useLocales'
 
 import Image from 'next/image'
-import backgroundImage from './assets/background.png'
+import backgroundImage from './assets/background.jpg'
 import sledman from './assets/sledman.png'
 import { useInView } from 'react-intersection-observer'
 

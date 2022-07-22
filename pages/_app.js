@@ -2,6 +2,7 @@ import '../assets/index.scss'
 
 import { useEffect } from 'react'
 import renderer from '../utils/renderer'
+import TagManager from 'react-gtm-module'
 
 import Header from '../components/header/header'
 import ScrollTop from '../components/scrollTop/scrollTop'
@@ -25,6 +26,10 @@ const MyApp = ({ Component, pageProps }) => {
     })
     // renderer.setToRender({handler: () => console.log(renderer.getRendering())})
   })
+
+  useEffect(() => {
+    TagManager.initialize({ gtmId: 'GTM-N4V47KJ' })
+  }, [])
 
   return (
     <>
