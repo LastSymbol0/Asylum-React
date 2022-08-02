@@ -34,7 +34,6 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-          
         <link rel='icon' href='/asylum.png' />
       </Head>
       <Header />
