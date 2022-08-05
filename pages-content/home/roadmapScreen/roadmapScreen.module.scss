@@ -98,7 +98,7 @@
 
       &:nth-child(even) {
         justify-self: start;
-        margin-top: rem(70);
+        margin-top: rem(120);
       }
 
       &:last-child {
@@ -191,6 +191,7 @@
   .scheme__scheme {
     width: rem(200);
     height: rem(200);
+    display: none;
     @media screen and (max-width: point(sm)) {
       display: none;
     }
