@@ -6,9 +6,9 @@ const Home = () => {
     <>
       <Head>
         <title>Asylum</title>
-        <meta name="description" content="Asylum" />
+        <meta name='description' content='Asylum' />
       </Head>
-      <HomeContent/>
+      <HomeContent />
     </>
   )
 }

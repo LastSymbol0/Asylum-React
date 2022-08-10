@@ -80,7 +80,6 @@
     gap: rem(25) rem(30);
   }
 
-
   @media screen and (max-width: point(sm)) {
     margin-top: rem(18);
     grid-template-columns: 1fr;
@@ -107,7 +106,6 @@
       }
     }
   }
-
 
   .scheme__block {
     position: relative;
@@ -203,7 +201,6 @@
   }
 }
 
-
 .roadmapScreen__scheme .scheme__row {
   --block-circle-13-translate: #{rem(60)};
   --block-circle-24-translate: #{rem(110)};
@@ -211,11 +208,9 @@
   @media screen and (max-width: point(md)) {
     --block-circle-13-translate: #{rem(30)};
     --block-circle-24-translate: #{rem(55)};
-
   }
 
   &:nth-child(odd) {
-
     .block__circle {
       right: calc(100% + var(--block-circle-13-translate));
 
@@ -227,8 +222,6 @@
   }
 
   &:nth-child(even) {
-
-
     .block__circle {
       left: calc(100% + var(--block-circle-24-translate));
 
@@ -238,7 +231,7 @@
       }
     }
   }
-  
+
   @media screen and (max-width: point(sm)) {
     --block-mobile-translate: #{rem(21)};
     &:nth-child(n + 1) {

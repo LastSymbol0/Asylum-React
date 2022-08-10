@@ -26,11 +26,11 @@
 }
 
 .loading__line {
-  --active-line-color: linear-gradient(270deg, #50BFFF 0%, #7F219C 71.35%);
+  --active-line-color: linear-gradient(270deg, #50bfff 0%, #7f219c 71.35%);
   position: relative;
   flex: 1;
   height: 3px;
-  background: rgba(255, 255, 255, .25);
+  background: rgba(255, 255, 255, 0.25);
   margin: 0 rem(30);
   margin-top: rem(-5);
 
@@ -52,7 +52,7 @@
     height: 100%;
     background: var(--active-line-color);
     max-width: 0;
-    transition: .1s linear;
+    transition: 0.1s linear;
   }
 
   .line_success {

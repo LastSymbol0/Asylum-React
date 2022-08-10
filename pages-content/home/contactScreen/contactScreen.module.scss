@@ -1,166 +1,167 @@
 @use '../../../assets/styles/index.scss' as *;
 
 .contactScreen {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: rem(150);
-    padding: 0 rem(350);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: rem(150);
+  padding: 0 rem(350);
+  padding-bottom: rem(150);
+  @media screen and (max-width: point(lg)) {
+    padding: 0 rem(150);
     padding-bottom: rem(150);
-    @media screen and (max-width: point(lg)) {
-        padding: 0 rem(150);
-        padding-bottom: rem(150);
-    }
-    @media screen and (max-width: point(md)) {
-        padding: 0 rem(100);
-        padding-bottom: rem(150);
-    }
-    @media screen and (max-width: point(sm)) {
-        padding: 0 rem(16);
-        padding-bottom: rem(100);
-        margin-top: rem(100);
-    }
+  }
+  @media screen and (max-width: point(md)) {
+    padding: 0 rem(100);
+    padding-bottom: rem(150);
+  }
+  @media screen and (max-width: point(sm)) {
+    padding: 0 rem(16);
+    padding-bottom: rem(100);
+    margin-top: rem(100);
+  }
 }
 
 .contactScreen__screenTitle {
-    width: rem(200);
-    @media screen and (max-width: point(sm)) {
-        width: rem(100);
-    }
+  width: rem(200);
+  @media screen and (max-width: point(sm)) {
+    width: rem(100);
+  }
 }
 
 .contactScreen__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: rem(100);
-    @media screen and (max-width: point(sm)) {
-        margin-top: rem(60);
-        flex-direction: column;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: rem(100);
+  @media screen and (max-width: point(sm)) {
+    margin-top: rem(60);
+    flex-direction: column;
+  }
 
-    .content__image {
-        width: rem(498);
-        height: rem(388);
-        @media screen and (max-width: point(md)) {
-            width: rem(398);
-            height: rem(288);
-        }
-        @media screen and (max-width: point(sm)) {
-            width: rem(228);
-            height: rem(178);
-        }
-
-        > span {
-            width: 100% !important;
-            height: 100% !important;
-        }
-    }
-
-    .content__list {
-        display: grid;
-        grid-template: auto auto / auto auto;
-        column-gap: rem(107);
-        row-gap: rem(79);
-        margin-left: rem(111);
-        @media screen and (max-width: point(md)) {
-            margin-left: rem(50);
-        }
-        @media screen and (max-width: point(sm)) {
-            column-gap: rem(58);
-            row-gap: rem(58);
-            margin-left: 0;
-            margin-top: rem(65);
-        }
-    }
-
-    .content__logo {
-        position: relative;
-
-        > span {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%;
-            height: 100%;
-            > span {
-                width: 100% !important;
-                height: 100% !important;
-            }
-        }
-
-        &:nth-child(1) {
-            width: rem(177);
-            height: rem(45);
-            @media screen and (max-width: point(sm)) {
-                width: rem(102);
-                height: rem(25);
-            }
-        }
-        &:nth-child(2) {
-            width: rem(148);
-            height: rem(30);
-            @media screen and (max-width: point(sm)) {
-                width: rem(85);
-                height: rem(17);
-            }
-        }
-        &:nth-child(3) {
-            width: rem(176);
-            height: rem(38);
-            @media screen and (max-width: point(sm)) {
-                width: rem(101);
-                height: rem(22);
-            }
-        }
-        &:nth-child(4) {
-            width: rem(144);
-            height: rem(26);
-            @media screen and (max-width: point(sm)) {
-                width: rem(83);
-                height: rem(15);
-            }
-        }
-
-
-        .logo_colored {
-            opacity: 0;
-            transition: opacity .3s ease;
-        }
-        .logo_basic {
-            opacity: 1;
-            transition: opacity .3s ease;
-        }
-
-        &:hover {
-            > .logo_colored {
-                opacity: 1;
-            }
-            > .logo_basic {
-                opacity: 0;
-            }
-        }
-    }
-}
-
-.contactScreen__background {
-    position: absolute;
-    width: rem(1440);
-    height: rem(1024);
-    bottom: 0; right: 0;
-    z-index: -1;
+  .content__image {
+    width: rem(498);
+    height: rem(388);
     @media screen and (max-width: point(md)) {
-        width: rem(1040);
-        height: rem(624);
+      width: rem(398);
+      height: rem(288);
     }
     @media screen and (max-width: point(sm)) {
-        width: rem(550);
-        height: rem(508);
+      width: rem(228);
+      height: rem(178);
     }
 
     > span {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+
+  .content__list {
+    display: grid;
+    grid-template: auto auto / auto auto;
+    column-gap: rem(107);
+    row-gap: rem(79);
+    margin-left: rem(111);
+    @media screen and (max-width: point(md)) {
+      margin-left: rem(50);
+    }
+    @media screen and (max-width: point(sm)) {
+      column-gap: rem(58);
+      row-gap: rem(58);
+      margin-left: 0;
+      margin-top: rem(65);
+    }
+  }
+
+  .content__logo {
+    position: relative;
+
+    > span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      > span {
         width: 100% !important;
         height: 100% !important;
+      }
     }
+
+    &:nth-child(1) {
+      width: rem(177);
+      height: rem(45);
+      @media screen and (max-width: point(sm)) {
+        width: rem(102);
+        height: rem(25);
+      }
+    }
+    &:nth-child(2) {
+      width: rem(148);
+      height: rem(30);
+      @media screen and (max-width: point(sm)) {
+        width: rem(85);
+        height: rem(17);
+      }
+    }
+    &:nth-child(3) {
+      width: rem(176);
+      height: rem(38);
+      @media screen and (max-width: point(sm)) {
+        width: rem(101);
+        height: rem(22);
+      }
+    }
+    &:nth-child(4) {
+      width: rem(144);
+      height: rem(26);
+      @media screen and (max-width: point(sm)) {
+        width: rem(83);
+        height: rem(15);
+      }
+    }
+
+    .logo_colored {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .logo_basic {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover {
+      > .logo_colored {
+        opacity: 1;
+      }
+      > .logo_basic {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.contactScreen__background {
+  position: absolute;
+  width: rem(1440);
+  height: rem(1024);
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  @media screen and (max-width: point(md)) {
+    width: rem(1040);
+    height: rem(624);
+  }
+  @media screen and (max-width: point(sm)) {
+    width: rem(550);
+    height: rem(508);
+  }
+
+  > span {
+    width: 100% !important;
+    height: 100% !important;
+  }
 }

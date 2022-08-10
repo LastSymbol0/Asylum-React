@@ -1,11 +1,11 @@
-import MainScreen from "./mainScreen/mainScreen"
+import MainScreen from './mainScreen/mainScreen'
 
 const TeamContent = () => {
-    return (
-        <>
-            <MainScreen/>
-        </>
-    )
+  return (
+    <>
+      <MainScreen />
+    </>
+  )
 }
 
 export default TeamContent
