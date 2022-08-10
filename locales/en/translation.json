@@ -22,11 +22,11 @@
       "social": [
         {
           "title": "telegram",
-          "link": "https://t.me/AsylumPlatform"
+          "link": "https://t.me/+6nuPLm_bXF43ZDZi"
         },
         {
           "title": "twitter",
-          "link": "https://twitter.com/AsylumPlatform"
+          "link": "https://twitter.com/AsylumSpace"
         },
         {
           "title": "linkedin",
@@ -108,28 +108,29 @@
         "title": "Roadmap",
         "stages": [
           {
-            "title": "q1",
-            "list": [
-              "· Asylum concept and strategy",
-              "· Product development start",
-              "· First agreements with games"
-            ]
-          },
-          {
-            "title": "q2",
-            "list": [
-              "· Website",
-              "· Litepaper",
-              "  PoC:",
-              "    · Interoperability standards",
-              "    · Game developers console",
-              "    · Substrate pallets",
-              "    · Game distribution system",
-              "    · 2 Demo games"
-            ]
-          },
-          {
             "title": "q3",
+            "list": [
+              "· Metaverse objects standard",
+              "· DAO protocol",
+              "· App for artists and developers",
+              "· Testnet launch",
+              "· 10 MOU with future space",
+              "builders"
+            ]
+          },
+          {
+            "title": "q4",
+            "list": [
+              "· Exchange protocol for items",
+              "and currencies",
+              "· Metaverse interface for User",
+              "· Items explorer app",
+              "· Consortium of Metaverse",
+              " key players for IMP definition"
+            ]
+          },
+          {
+            "title": "q1",
             "list": [
               "· Seed round",
               "· Whitepaper",
@@ -138,24 +139,20 @@
             ]
           },
           {
-            "title": "q4",
+            "title": "q2",
             "list": [
-              "· Token launch",
-              "  MVP launch:",
-              "    · Asylum for players (app)",
-              "    · Creators ecosystem",
-              "     (framework)",
-              "    · Live in Polkadot/Kusama",
-              "    · 10-20 games in ecosystem"
+              "· Backend solution",
+              "· Involving of “anchor” apps",
+              "to the ecosystem"
             ]
           },
           {
-            "title": "q?",
+            "title": "q3",
             "list": [
-              "· Asylum studio",
-              "· Gamified inteface",
-              "· Apps for desktop/mobile",
-              "· Virtual reality"
+              "· Identity (Avatar) protocol",
+              "· Marketplace as a space",
+              "· Integrators’ spaces are ready",
+              "to deploy"
             ]
           }
         ]
@@ -225,6 +222,10 @@
           {
             "title": "nitrox",
             "link": "https://nitrox.run/"
+          },
+          {
+            "title": "katana-inu",
+            "link": "https://katanainu.com/"
           }
         ]
       },
@@ -237,11 +238,11 @@
           },
           {
             "title": "twitter",
-            "link": "https://twitter.com/AsylumPlatform"
+            "link": "https://twitter.com/AsylumSpace"
           },
           {
             "title": "telegram",
-            "link": "https://t.me/AsylumPlatform"
+            "link": "https://t.me/+6nuPLm_bXF43ZDZi"
           },
           {
             "title": "discord",

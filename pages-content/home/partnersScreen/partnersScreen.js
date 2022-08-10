@@ -13,6 +13,8 @@ import logoNitroxColoredImage from './assets/logo-nitrox-colored.svg'
 import logoNitroxImage from './assets/logo-nitrox-grey.svg'
 import logoEvoColorImage from './assets/logo-evo-colored.png'
 import logoEvoImage from './assets/logo-evo-grey.png'
+import logoKatanaImageColored from './assets/logo-katana-colored.png'
+import logoKatanaImage from './assets/logo-katana-grey.png'
 
 const data = {
     "darwinia": {
@@ -30,6 +32,10 @@ const data = {
     "nitrox": {
         colored: logoNitroxColoredImage,
         basic: logoNitroxImage
+    },
+    "katana-inu": {
+        colored: logoKatanaImageColored,
+        basic: logoKatanaImage
     },
 }
 
