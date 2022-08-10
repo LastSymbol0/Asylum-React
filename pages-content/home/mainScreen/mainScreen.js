@@ -10,9 +10,9 @@ const mainScreen = () => {
   return (
     <div className={styles.mainScreen}>
       <div className={styles.mainScreen__content}>
-        <h1 data-text={locale.title} className={styles.mainScreen__title}>
+        <h2 data-text={locale.title} className={styles.mainScreen__title}>
           {locale.title}
-        </h1>
+        </h2>
         <div className={styles.content__background}>
           <div className={styles.backgroundDesktop}>
             <Image src={backgroundImage} priority={true} alt='' />

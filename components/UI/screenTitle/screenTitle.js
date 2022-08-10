@@ -4,10 +4,17 @@ import cn from 'classnames'
 import Image from 'next/image'
 import lineImage from './assets/line.png'
 
-const ScreenTitle = ({ className, children, ...props }) => {
+const ScreenTitle = ({
+  className,
+  contentClassName,
+  children,
+  as = 'h2',
+  ...props
+}) => {
+  const Tag = as
   return (
     <div {...props} className={cn(styles.screenTitle, className)}>
-      <h2>{children}</h2>
+      <Tag className={contentClassName}>{children}</Tag>
       <div>
         <Image src={lineImage} />
       </div>

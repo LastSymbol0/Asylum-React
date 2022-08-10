@@ -2,6 +2,7 @@
 @use './styles/fonts';
 @use './styles/grid';
 @use './styles/mixins';
+@import './styles/headers';
 
 @import './fonts/stylesheet.css';
 @import './styles/modules/swiper.scss';
@@ -88,20 +89,11 @@ p {
 }
 
 h1 {
-  @include fonts.font-oxanium-medium;
-  font-size: fonts.font(55);
-  @media screen and (max-width: grid.point(sm)) {
-    @include fonts.font-oxanium-regular;
-    font-size: fonts.font(28);
-  }
+  @include h1-style;
 }
 
 h2 {
-  @include fonts.font-oxanium-semibold;
-  font-size: fonts.font(28);
-  @media screen and (max-width: grid.point(sm)) {
-    font-size: fonts.font(18);
-  }
+  @include h2-style;
 }
 
 .swiper {

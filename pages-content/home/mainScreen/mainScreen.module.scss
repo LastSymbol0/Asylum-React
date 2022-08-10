@@ -1,4 +1,5 @@
 @use '../../../assets/styles/index.scss' as *;
+@import '../../../assets/styles/headers';
 
 .mainScreen {
   width: 100%;
@@ -69,6 +70,7 @@
 }
 
 .mainScreen__title {
+  @include h1-style;
   position: absolute;
   max-width: rem(478);
   z-index: 2;

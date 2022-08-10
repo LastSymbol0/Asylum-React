@@ -20,7 +20,9 @@ const WhatScreen = () => {
 
   return (
     <div id='theAsylum' className={styles.whatScreen}>
-      <ScreenTitle>{locale.title}</ScreenTitle>
+      <ScreenTitle as={'h1'} contentClassName={styles.title}>
+        {locale.title}
+      </ScreenTitle>
       <div className={styles.picture}>
         <div
           ref={ref}
