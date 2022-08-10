@@ -28,13 +28,18 @@ const WhatScreen = () => {
           ref={ref}
           className={classNames(styles.sledman, inView ? styles.running : null)}
         >
-          <Image loading='eager' priority={true} src={sledman} alt='sledman' />
+          <Image
+            loading='eager'
+            priority={true}
+            src={sledman}
+            alt='Asylum | sledman'
+          />
         </div>
         <Image
           loading='eager'
           priority={true}
           src={backgroundImage}
-          alt='castle'
+          alt='Asylum | castle'
         />
       </div>
       <div className={styles.text}>

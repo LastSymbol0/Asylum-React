@@ -55,10 +55,18 @@ const ContactScreen = () => {
               rel='noreferrer'
             >
               <span className={styles.logo_basic}>
-                <Image priority={true} src={data[_.title].basic} alt='' />
+                <Image
+                  priority={true}
+                  src={data[_.title].basic}
+                  alt={`Asylum | ${_.title}`}
+                />
               </span>
               <span className={styles.logo_colored}>
-                <Image priority={true} src={data[_.title].colored} alt='' />
+                <Image
+                  priority={true}
+                  src={data[_.title].colored}
+                  alt={`Asylum | ${_.title}`}
+                />
               </span>
             </a>
           ))}

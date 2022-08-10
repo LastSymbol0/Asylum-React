@@ -21,7 +21,7 @@ const MaterialsScreen = () => {
       <div className={styles.materialsScreen__content}>
         {locale.cta.map((_, i) => (
           <div key={i} className={styles.content__row}>
-            <Image src={data[i]} priority={true} alt='' />
+            <Image src={data[i]} priority={true} alt={`Asylum | ${_.title}`} />
             <Button
               className={styles.row__button}
               label='outlineGradient'

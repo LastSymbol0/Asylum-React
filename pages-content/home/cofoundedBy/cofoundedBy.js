@@ -25,10 +25,18 @@ const CofoundedBy = () => {
           rel='noreferrer'
         >
           <span className={styles.logo_basic}>
-            <Image priority={true} src={data[locale.title].basic} alt='' />
+            <Image
+              priority={true}
+              src={data[locale.title].basic}
+              alt={`Asylum | ${locale.title}`}
+            />
           </span>
           <span className={styles.logo_colored}>
-            <Image priority={true} src={data[locale.title].colored} alt='' />
+            <Image
+              priority={true}
+              src={data[locale.title].colored}
+              alt={`Asylum | ${locale.title}`}
+            />
           </span>
         </a>
       </div>

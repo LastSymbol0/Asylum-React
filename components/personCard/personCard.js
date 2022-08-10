@@ -74,14 +74,19 @@ const PersonCard = ({
           className={styles.avatar__image}
           priority={true}
           src={avatar}
-          alt=''
+          alt={`Asylum | ${name}`}
         />
       </div>
       <div className={styles.personCard__titleBlock}>
         <p className={styles.personCard__title}>{name}</p>
         {supercolonyMember ? (
           <div className={styles.personCard__supercolonyLogo}>
-            <Image layout='fill' src={sclogo} priority={true} alt='sc-logo' />
+            <Image
+              layout='fill'
+              src={sclogo}
+              priority={true}
+              alt='Asylum | sc-logo'
+            />
           </div>
         ) : null}
       </div>

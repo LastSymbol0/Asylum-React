@@ -46,28 +46,28 @@ const PartnersScreen = () => {
         {locale.title}
       </ScreenTitle>
       <div className={styles.partnersScreen__content}>
-        {locale.list.map((_, i) => (
+        {locale.list.map((partner, index) => (
           <a
-            key={i}
+            key={index}
             className={styles.content__logo}
-            href={_.link}
+            href={partner.link}
             target='_blank'
             rel='noreferrer'
           >
             <span className={styles.logo_basic}>
               <Image
                 priority={true}
-                src={data[_.title].basic}
+                src={data[partner.title].basic}
                 objectFit={'contain'}
-                alt=''
+                alt={`Asylum | ${partner.title}`}
               />
             </span>
             <span className={styles.logo_colored}>
               <Image
                 priority={true}
-                src={data[_.title].colored}
+                src={data[partner.title].colored}
                 objectFit={'contain'}
-                alt=''
+                alt={`Asylum | ${partner.title}`}
               />
             </span>
           </a>
