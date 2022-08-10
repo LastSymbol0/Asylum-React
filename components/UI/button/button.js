@@ -21,8 +21,8 @@ const ButtonOutlineGradient = ({
   link,
   ...props
 }) => {
-  type = type ? type : types['small']
-  active = active ? active : isActive['false']
+  type = type || types.small
+  active = active || isActive.false
   if (link) {
     return (
       <div
