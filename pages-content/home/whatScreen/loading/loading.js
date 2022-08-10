@@ -1,5 +1,4 @@
 import styles from './loading.module.scss'
-import cn from 'classnames'
 import classNames from 'classnames'
 
 import { useEffect, useRef, useState } from 'react'
@@ -88,7 +87,7 @@ const TheLoading = ({ className, ...props }) => {
   }
 
   return (
-    <div {...props} className={cn(styles.loading, className)}>
+    <div {...props} className={classNames(styles.loading, className)}>
       <div className={styles.loading__elements}>
         <TheArrow />
         <div
