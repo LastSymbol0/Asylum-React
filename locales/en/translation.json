@@ -46,17 +46,7 @@
   "pages": {
     "home": {
       "main-screen": {
-        "title": "Entrypoint to the gaming Metaverse",
-        "cta": [
-          {
-            "title": "For creators",
-            "link": "#materials"
-          },
-          {
-            "title": "For gamers",
-            "link": "#theAsylum"
-          }
-        ]
+        "title": "Look closer, we are metaverse"
       },
       "what-screen": {
         "title": "What is the Asylum?",
