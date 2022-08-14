@@ -1,194 +1,101 @@
 @use '../../../assets/styles/index.scss' as *;
+@import '../../../assets/styles/headers';
 
 .mainScreen {
-    width: 100%;
-    padding: 0 rem(350);
-    margin-top: rem(100);
-    @media screen and (max-width: point(lg)) {
-        padding: 0 rem(150);
-    }
-    @media screen and (max-width: point(md)) {
-        padding: 0 rem(100);
-    }
-    @media screen and (max-width: point(sm)) {
-        padding: 0 rem(16);
-    }
+  width: 100%;
+  padding: 0 rem(350);
+  margin-top: rem(100);
+  @media screen and (max-width: point(lg)) {
+    padding: 0 rem(150);
+  }
+  @media screen and (max-width: point(md)) {
+    padding: 0 rem(100);
+  }
+  @media screen and (max-width: point(sm)) {
+    padding: 0 rem(16);
+  }
 }
 
 .mainScreen__content {
-    position: relative;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .content__background {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
+    z-index: -1;
+  }
+
+  .backgroundMobile {
+    display: none !important;
+    width: 100%;
+
+    > span {
+      width: 100% !important;
+      left: 50% !important;
+      transform: translateX(-50%) scale(1.1) !important;
+    }
+    img {
+      min-width: 100% !important;
+      height: auto !important;
+    }
+
+    @media screen and (max-width: point(sm)) {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .backgroundDesktop {
+    display: flex !important;
     align-items: center;
-
-    .content__background {
-        width: 100%;
-        height: 100%;
-        z-index: -1;
+    justify-content: center;
+    width: 100%;
+    > span {
+      width: 100% !important;
+    }
+    img {
+      min-width: 100% !important;
+      height: auto !important;
     }
 
-    .backgroundMobile {
-        display: none !important;
-        width: 100%;
-
-        > span {
-            width: 100% !important;
-            left: 50% !important;
-            transform: translateX(-50%) scale(1.1) !important;
-        }
-        img {
-            min-width: 100% !important;
-            height: auto !important;
-        }
-
-        @media screen and (max-width: point(sm)) {
-            display: flex !important;
-            align-items: center;
-            justify-content: center;
-        }
+    @media screen and (max-width: point(sm)) {
+      display: none !important;
     }
-    .backgroundDesktop {
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        > span {
-            width: 100% !important;
-        }
-        img {
-            min-width: 100% !important;
-            height: auto !important;
-        }
-
-        @media screen and (max-width: point(sm)) {
-            display: none !important;
-        }
-    }
-
-    .content__buttons {
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-        @media screen and (max-width: point(sm)) {
-            flex-direction: column;
-
-            > :first-child {
-                margin-top: rem(65);
-            }
-            > :not(:first-child) {
-                margin-top: rem(37);
-            }
-        }
-    }
-    
+  }
 }
 
 .mainScreen__title {
+  @include h1-style;
+  position: absolute;
+  max-width: rem(478);
+  z-index: 2;
+  top: rem(180);
+  left: rem(140);
+  @media screen and (max-width: point(md)) {
+    left: rem(0);
+    top: rem(110);
+  }
+  @media screen and (max-width: point(sm)) {
+    max-width: rem(210);
+    left: rem(10);
+    top: rem(10);
+  }
+
+  &::before {
+    content: attr(data-text);
     position: absolute;
-    max-width: rem(478);
-    z-index: 2;
-    top: rem(180);
-    left: rem(140);
-    @media screen and (max-width: point(md)) {
-        left: rem(0);
-        top: rem(110);
-    }
-    @media screen and (max-width: point(sm)) {
-        max-width: rem(210);
-        left: rem(10);
-        top: rem(10);
-    }
-
-    &::before {
-        content: attr(data-text);
-        position: absolute;
-        top: 0; left: 0;
-        transform: translateX(-3px);
-        background: linear-gradient(85.27deg, #CC00FF 0%, #50BFFF 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-        filter: blur(4px);
-        z-index: -1;
-    }
-}
-
-
-.mainScreen__button {
-    position: absolute !important;
-    top: rem(580);
-    transition: transform .3s ease;
-    > * {
-        background-color: transparent !important;
-    }
-    > *::before {
-        display: none;
-    }
-
-    @media screen and (max-width: point(md)) {
-        top: rem(442);
-    }
-    @media screen and (max-width: point(sm)) {
-        position: static !important;
-        top: 0;
-        > * {
-            background-color: color(dark100) !important;
-            width: rem(145);
-        }
-        > *::before {
-            display: block !important;
-        }
-    }
-
-    &:hover {
-        transform: translateY(-10px);
-    }
-
-
-    &.button1 {
-        left: rem(145);
-        @media screen and (min-width: point(md)) {
-            transform: perspective(474px) rotateX(-10deg) rotateY(-7deg) rotate(-0.5deg) translateX(7px) translateY(-2px);
-            transform-origin: right;
-        }
-        @media screen and (min-width: point(sm)) {
-            transform: perspective(474px) rotateX(-10deg) rotateY(-7deg) rotate(-0.5deg) translateX(7px) translateY(0px);
-            transform-origin: right;
-        }
-
-    }
-    &.button2 {
-        left: rem(735);
-        @media screen and (min-width: point(md)) {
-            transform: perspective(474px) rotateX(-12deg) rotateY(3deg) rotate(0.5deg) translateX(-20px) translateY(-3px);
-            transform-origin: left;
-        }
-        @media screen and (min-width: point(sm)) {
-            transform: perspective(474px) rotateX(-12deg) rotateY(3deg) rotate(0.5deg) translateX(-10px) translateY(0px);
-            transform-origin: left;
-        }
-
-    }
-    @media screen and (max-width: point(md)) {
-        &.button1 { left: rem(100); }
-        &.button2 { left: rem(556); }
-
-        > * {
-            font-size: rem(26) !important;
-        }
-    }
-    @media screen and (max-width: point(sm)) {
-        > * {
-            font-size: font(16) !important;
-        }
-    }
-
+    top: 0;
+    left: 0;
+    transform: translateX(-3px);
+    background: linear-gradient(85.27deg, #cc00ff 0%, #50bfff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: blur(4px);
+    z-index: -1;
+  }
 }

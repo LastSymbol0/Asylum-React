@@ -1,11 +1,10 @@
 @use '../../../assets/styles/index.scss' as *;
+@import '../../../assets/styles/headers';
 
 .whatScreen {
   margin: rem(80) rem(20) 0;
-  position: relative;
   display: flex;
   flex-direction: column;
-  gap: rem(30);
   align-items: center;
 
   @media screen and (min-width: point(sm)) {
@@ -22,42 +21,12 @@
     padding: 0 rem(140);
   }
 
-  .rows {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-between;
-    font-size: font(11);
-    line-height: 190%;
-    text-align: justify;
-    @include font-ubuntu-regular;
+  .title {
+    @include h2-style;
+  }
 
-    @media screen and (min-width: point(sm)) {
-      margin: rem(20) rem(0) rem(100);
-      gap: rem(400);
-      font-size: font(16);
-      line-height: 200%;
-      text-align: unset;
-    }
-
-    @media screen and (min-width: point(md)) {
-      margin: rem(80) rem(0) rem(150);
-      gap: rem(640);
-    }
-
-    @media screen and (min-width: point(lg)) {
-      gap: rem(760);
-      font-size: font(18);
-    }
-
-    .background {
-      position: relative;
-      @media screen and (min-width: point(sm)) {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-    }
+  .picture {
+    position: relative;
 
     .sledman {
       z-index: 1;
@@ -83,22 +52,27 @@
         transform: inherit;
       }
     }
+  }
 
-    .row {
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      gap: rem(20);
+  .text {
+    font-size: font(11);
+    line-height: 190%;
+    text-align: justify;
+    @include font-ubuntu-regular;
 
-      @media screen and (min-width: point(sm)) {
-        font-size: font(18);
-        width: 48%;
+    @media screen and (min-width: point(sm)) {
+      margin-bottom: rem(100);
+      font-size: font(16);
+      line-height: 200%;
+      text-align: unset;
 
-        &:last-child {
-          text-align: right;
-          align-self: end;
-        }
+      p {
+        text-indent: rem(12);
       }
+    }
+
+    @media screen and (min-width: point(lg)) {
+      font-size: font(18);
     }
   }
 

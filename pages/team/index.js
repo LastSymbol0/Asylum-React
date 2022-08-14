@@ -6,9 +6,9 @@ const Team = () => {
     <>
       <Head>
         <title>Asylum - Team</title>
-        <meta name="description" content="Asylum" />
+        <meta name='description' content='Asylum' />
       </Head>
-      <TeamContent/>
+      <TeamContent />
     </>
   )
 }

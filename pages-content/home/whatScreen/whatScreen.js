@@ -2,7 +2,7 @@ import styles from './whatScreen.module.scss'
 import { useLocales } from '../../../hooks/useLocales'
 
 import Image from 'next/image'
-import backgroundImage from './assets/background.jpg'
+import backgroundImage from './assets/background.png'
 import sledman from './assets/sledman.png'
 import { useInView } from 'react-intersection-observer'
 
@@ -20,40 +20,32 @@ const WhatScreen = () => {
 
   return (
     <div id='theAsylum' className={styles.whatScreen}>
-      <ScreenTitle>{locale.title}</ScreenTitle>
-      <div className={styles.rows}>
-        <div className={styles.row}>
-          {locale.body[0].split('\n').map((textpart, index) => (
-            <p key={index}>{textpart}</p>
-          ))}
-        </div>
-        <div className={styles.background}>
-          <div
-            ref={ref}
-            className={classNames(
-              styles.sledman,
-              inView ? styles.running : null
-            )}
-          >
-            <Image
-              loading='eager'
-              priority={true}
-              src={sledman}
-              alt='sledman'
-            />
-          </div>
+      <ScreenTitle as={'h1'} contentClassName={styles.title}>
+        {locale.title}
+      </ScreenTitle>
+      <div className={styles.picture}>
+        <div
+          ref={ref}
+          className={classNames(styles.sledman, inView ? styles.running : null)}
+        >
           <Image
             loading='eager'
             priority={true}
-            src={backgroundImage}
-            alt='castle'
+            src={sledman}
+            alt='Asylum | sledman'
           />
         </div>
-        <div className={styles.row}>
-          {locale.body[1].split('\n').map((textpart, index) => (
-            <p key={index}>{textpart}</p>
-          ))}
-        </div>
+        <Image
+          loading='eager'
+          priority={true}
+          src={backgroundImage}
+          alt='Asylum | castle'
+        />
+      </div>
+      <div className={styles.text}>
+        {locale.body.map((textpart, index) => (
+          <p key={index}>{textpart}</p>
+        ))}
       </div>
       <TheLoading className={styles.loading}>{locale.loading}</TheLoading>
     </div>

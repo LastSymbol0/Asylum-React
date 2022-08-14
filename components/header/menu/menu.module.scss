@@ -1,59 +1,59 @@
 @use '../../../assets/styles/index.scss' as *;
 
 .menu {
-    position: relative;
+  position: relative;
 
-    .menu__button {
-        width: rem(21);
-        padding: rem(10);
-        box-sizing: content-box;
-        margin-right: rem(-10);
+  .menu__button {
+    width: rem(21);
+    padding: rem(10);
+    box-sizing: content-box;
+    margin-right: rem(-10);
 
-        > * {
-            width: 100%;
-            height: 2px;
-            background: color(light100);
-        }
-        > :not(:first-child) {
-            margin-top: rem(9);
-        }
-
-        &.active {
-            + .menu__list {
-                max-height: rem(160);
-                > * {transform: translateY(0);}
-            } 
-        }
+    > * {
+      width: 100%;
+      height: 2px;
+      background: color(light100);
+    }
+    > :not(:first-child) {
+      margin-top: rem(9);
     }
 
-
-
-    .menu__list {
-        position: absolute;
-        top: calc(100% + rem(8));
-        right: rem(-30);
-        background: color(light100);
-        border-bottom-left-radius: rem(7);
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        max-height: 0;
-        transition: max-height .5s ease;
-
+    &.active {
+      + .menu__list {
+        max-height: rem(160);
         > * {
-            @include font-oxanium-semibold;
-            color: color(dark100);
-            font-size: font(12);
-            padding: rem(10) rem(11);
-            padding-right: rem(54);
-            transition: color .3s ease, background-color .3s ease, transform .5s ease;
-            transform: translateY(rem(20));
+          transform: translateY(0);
         }
+      }
+    }
+  }
 
-        > .active {
-            background: color(dark100);
-            color: color(light100);
-        }
+  .menu__list {
+    position: absolute;
+    top: calc(100% + rem(8));
+    right: rem(-30);
+    background: color(light100);
+    border-bottom-left-radius: rem(7);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+
+    > * {
+      @include font-oxanium-semibold;
+      color: color(dark100);
+      font-size: font(12);
+      padding: rem(10) rem(11);
+      padding-right: rem(54);
+      transition: color 0.3s ease, background-color 0.3s ease,
+        transform 0.5s ease;
+      transform: translateY(rem(20));
     }
 
+    > .active {
+      background: color(dark100);
+      color: color(light100);
+    }
+  }
 }

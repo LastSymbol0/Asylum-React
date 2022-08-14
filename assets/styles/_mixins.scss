@@ -3,17 +3,17 @@
 $fontBase: 16;
 
 @function rem($px) {
-    @return #{math.div($px, $fontBase)}rem
-};
+  @return #{math.div($px, $fontBase)}rem;
+}
 
 @function em($px) {
-    @return #{math.div($px, $fontBase)}em
-};
+  @return #{math.div($px, $fontBase)}em;
+}
 
 @mixin hideScrollbar() {
-    -ms-overflow-style: none;
-    scrollbar-width: none; 
-    &::-webkit-scrollbar {
-        display: none;
-    }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

@@ -46,22 +46,13 @@
   "pages": {
     "home": {
       "main-screen": {
-        "title": "Entrypoint to the gaming Metaverse",
-        "cta": [
-          {
-            "title": "For creators",
-            "link": "#materials"
-          },
-          {
-            "title": "For gamers",
-            "link": "#theAsylum"
-          }
-        ]
+        "title": "Look closer, we are metaverse"
       },
       "what-screen": {
         "title": "What is the Asylum?",
         "body": [
-          "The transition to the Metaverse will be the next step for entertainment industry. But why are we all still not in the Metaverse if so many metaverse projects already exist? \n Okay, actually, because we are trying to build the Metaverse, completely new concept for us, using the same approaches that were used for the regular games and platforms.",
+          "The transition to the Metaverse will be the next step for entertainment industry. But why are we all still not in the Metaverse if so many metaverse projects already exist?",
+          "Okay, actually, because we are trying to build the Metaverse, completely new concept for us, using the same approaches that were used for the regular games and platforms.",
           "We are creating Asylum to provide a platform for the next generation of gaming, united into the single Metaverse, where anyone has a place to play, study, work and express themselves. Whether you are a Creator or a Player - we are building Asylum to empower you to become a part of the Metaverse."
         ],
         "loading": "loading.."
@@ -376,8 +367,7 @@
               "name": "Illia Okolskyi",
               "position": "Unity Developer",
               "supercolonyMember": false,
-              "social": [
-              ]
+              "social": []
             },
             {
               "name": "Horacio Lex",

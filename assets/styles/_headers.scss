@@ -1,0 +1,19 @@
+@use 'fonts';
+@use 'grid';
+
+@mixin h1-style {
+  @include fonts.font-oxanium-medium;
+  font-size: fonts.font(55);
+  @media screen and (max-width: grid.point(sm)) {
+    @include fonts.font-oxanium-regular;
+    font-size: fonts.font(28);
+  }
+}
+
+@mixin h2-style {
+  @include fonts.font-oxanium-semibold;
+  font-size: fonts.font(28);
+  @media screen and (max-width: grid.point(sm)) {
+    font-size: fonts.font(18);
+  }
+}

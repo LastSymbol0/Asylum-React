@@ -1,92 +1,96 @@
 @use '../../../assets/styles/index.scss' as *;
 
 .button {
+  position: relative;
+  --buttonGradient: linear-gradient(87.83deg, #cc00ff 0%, #50bfff 100%);
+  cursor: pointer;
+  > * {
     position: relative;
-    --buttonGradient: linear-gradient(87.83deg, #CC00FF 0%, #50BFFF 100%);
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: none;
+    padding-left: rem(40);
+    padding-right: rem(40);
+    padding-top: rem(11);
+    padding-bottom: rem(13);
+    border-radius: rem(17);
+    font-size: inherit;
+    font-family: inherit;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
     cursor: pointer;
-    > * {
-        position: relative;
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-        outline: none;
-        border: none;
-        text-decoration: none;
-        text-transform: none;
-        padding-left: rem(40);
-        padding-right: rem(40);
-        padding-top: rem(11);
-        padding-bottom: rem(13);
-        border-radius: rem(17);
-        font-size: inherit;
-        font-family: inherit;
-        transition: background-color .3s ease, color .3s ease;
-        text-align: center;
-        cursor: pointer;
-        @media screen and (max-width: point(sm)) {
-            padding-left: rem(13);
-            padding-right: rem(13);
-            padding-top: rem(6);
-            padding-bottom: rem(8);
-            border-radius: rem(10);
-        }
+    @media screen and (max-width: point(sm)) {
+      padding-left: rem(13);
+      padding-right: rem(13);
+      padding-top: rem(6);
+      padding-bottom: rem(8);
+      border-radius: rem(10);
     }
+  }
 }
 
 .button.buttonOutline {
-    > * {
-        --border-width: 1px;
-        color: color(light100);
-        background: color(dark100);
-        background-clip: padding-box;
-        border: var(--border-width) solid transparent;
-        &:before {
-            content: '';
-            position: absolute;
-            top: 0; right: 0; bottom: 0; left: 0;
-            z-index: -1;
-            margin: calc(-1 * var(--border-width));
-            border-radius: inherit; 
-            background: var(--buttonGradient);
-        }
-
-        @media screen and (max-width: point(sm)) {
-            border-radius: rem(18);
-            padding: rem(8) rem(17);
-        }
+  > * {
+    --border-width: 1px;
+    color: color(light100);
+    background: color(dark100);
+    background-clip: padding-box;
+    border: var(--border-width) solid transparent;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: calc(-1 * var(--border-width));
+      border-radius: inherit;
+      background: var(--buttonGradient);
     }
 
-    &:hover > *, &.active > * {
-        background-color: var(--buttonGradient);
-    }   
+    @media screen and (max-width: point(sm)) {
+      border-radius: rem(18);
+      padding: rem(8) rem(17);
+    }
+  }
+
+  &:hover > *,
+  &.active > * {
+    background-color: var(--buttonGradient);
+  }
 }
 
 .buttonBig {
-    > * {
-        @include font-ubuntu-regular;
-        font-size: font(32);
-        @media screen and (max-width: point(sm)) {
-            font-size: font(16) !important;
-        }
+  > * {
+    @include font-ubuntu-regular;
+    font-size: font(32);
+    @media screen and (max-width: point(sm)) {
+      font-size: font(16) !important;
     }
+  }
 }
 
 .buttonSmall {
-    > * {
-        @include font-ubuntu-regular;
-        font-size: font(24);
-        @media screen and (max-width: point(sm)) {
-            font-size: font(16);
-        }
+  > * {
+    @include font-ubuntu-regular;
+    font-size: font(24);
+    @media screen and (max-width: point(sm)) {
+      font-size: font(16);
     }
+  }
 }
 
 .buttonTab {
-    > * {
-        @include font-ubuntu-medium;
-        font-size: font(24);
-        @media screen and (max-width: point(sm)) {
-            font-size: font(11);
-        }
+  > * {
+    @include font-ubuntu-medium;
+    font-size: font(24);
+    @media screen and (max-width: point(sm)) {
+      font-size: font(11);
     }
+  }
 }
