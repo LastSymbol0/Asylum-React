@@ -314,18 +314,6 @@
               ]
             },
             {
-              "name": "Alexander Kaplaty",
-              "position": "Supercolony, CFO",
-              "supercolonyMember": true,
-              "body": "",
-              "social": [
-                {
-                  "name": "linkedin",
-                  "link": "https://www.linkedin.com/in/kaplaty/"
-                }
-              ]
-            },
-            {
               "name": "Kyrylo Nagorny",
               "position": "Supercolony, CMO",
               "supercolonyMember": true,
@@ -420,6 +408,17 @@
                 {
                   "name": "linkedin",
                   "link": "https://www.linkedin.com/in/olesiaarkh/"
+                }
+              ]
+            },            {
+              "name": "Alexander Kaplaty",
+              "position": "Supercolony, Financial Advisor",
+              "supercolonyMember": true,
+              "body": "",
+              "social": [
+                {
+                  "name": "linkedin",
+                  "link": "https://www.linkedin.com/in/kaplaty/"
                 }
               ]
             }

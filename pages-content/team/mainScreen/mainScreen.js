@@ -33,13 +33,13 @@ const avatarsMembers = {
   'Illia Okolskyi': IlliaOk,
   'Horacio Lex': Horacio,
   'Lera Yakovenko': Lera,
-  'Alexander Kaplaty': Alexander,
   'Kyrylo Nagorny': Kyrylo,
   'Oleh Kulykovskyi': Oleh,
 }
 
 const avatarsAdvisors = {
   'Olesia Arkhipova': Olesia,
+  'Alexander Kaplaty': Alexander,
 }
 
 const MainScreen = () => {
