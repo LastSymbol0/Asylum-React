@@ -73,6 +73,7 @@
   @include h1-style;
   position: absolute;
   max-width: rem(478);
+  white-space: pre-line;
   z-index: 2;
   top: rem(180);
   left: rem(140);

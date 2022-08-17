@@ -78,6 +78,7 @@
 
   .loading {
     display: none;
+    margin-top: rem(80);
     @media screen and (min-width: point(sm)) {
       display: block;
     }
