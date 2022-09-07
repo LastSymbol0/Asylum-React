@@ -1,4 +1,5 @@
 @use '../../../assets/styles/index.scss' as *;
+@use '../../../assets/styles/fonts';
 @import '../../../assets/styles/headers';
 
 .mainScreen {
@@ -72,19 +73,20 @@
 .mainScreen__title {
   @include h1-style;
   position: absolute;
-  max-width: rem(478);
   white-space: pre-line;
   z-index: 2;
   top: rem(180);
-  left: rem(140);
+  left: rem(100);
   @media screen and (max-width: point(md)) {
+    font-size: rem(50);
     left: rem(0);
-    top: rem(110);
+    top: rem(130);
   }
   @media screen and (max-width: point(sm)) {
-    max-width: rem(210);
-    left: rem(10);
-    top: rem(10);
+    font-size: rem(23);
+    max-width: rem(250);
+    left: rem(40);
+    top: rem(80);
   }
 
   &::before {
