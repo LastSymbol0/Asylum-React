@@ -14,6 +14,11 @@ import logoEvoColorImage from './assets/logo-evo-colored.png'
 import logoEvoImage from './assets/logo-evo-grey.png'
 import logoKatanaImageColored from './assets/logo-katana-colored.png'
 import logoKatanaImage from './assets/logo-katana-grey.png'
+import logoBlockchainGameAllianceColored from './assets/logo-blockchain-game-alliance-colored.png'
+import logoBlockchainGameAlliance from './assets/logo-blockchain-game-alliance.png'
+import logoMetaverseStanardsForum from './assets/logo-metaverse-standrads-forum.png'
+import logoMetaverseStanardsForumColored from './assets/logo-metaverse-standrads-forum-colored.png'
+import classNames from 'classnames'
 
 const data = {
   darwinia: {
@@ -36,40 +41,46 @@ const data = {
     colored: logoKatanaImageColored,
     basic: logoKatanaImage,
   },
+  'blockchain-game-alliance': {
+    colored: logoBlockchainGameAllianceColored,
+    basic: logoBlockchainGameAlliance,
+  },
+  'metaverse-standrads-forum': {
+    colored: logoMetaverseStanardsForumColored,
+    basic: logoMetaverseStanardsForum,
+  },
 }
 
 const PartnersScreen = () => {
   const locale = useLocales('pages.home.partners-screen')
   return (
     <div className={styles.partnersScreen}>
-      <ScreenTitle className={styles.partnersScreen__screenTitle}>
-        {locale.title}
-      </ScreenTitle>
-      <div className={styles.partnersScreen__content}>
-        {locale.list.map((partner, index) => (
+      <ScreenTitle className={styles.title}>{locale.title}</ScreenTitle>
+      <div className={styles.content}>
+        {locale.list.map((partner) => (
           <a
-            key={index}
-            className={styles.content__logo}
+            key={partner.title}
+            className={styles.link}
             href={partner.link}
             target='_blank'
             rel='noreferrer'
           >
-            <span className={styles.logo_basic}>
-              <Image
-                priority={true}
-                src={data[partner.title].basic}
-                objectFit={'contain'}
-                alt={`Asylum | ${partner.title}`}
-              />
-            </span>
-            <span className={styles.logo_colored}>
-              <Image
-                priority={true}
-                src={data[partner.title].colored}
-                objectFit={'contain'}
-                alt={`Asylum | ${partner.title}`}
-              />
-            </span>
+            <Image
+              className={classNames(styles.logo_basic, styles.logo)}
+              priority={true}
+              src={data[partner.title].basic}
+              objectFit={'contain'}
+              layout={'fill'}
+              alt={`Asylum | ${partner.title}`}
+            />
+            <Image
+              className={classNames(styles.logo_colored, styles.logo)}
+              priority={true}
+              src={data[partner.title].colored}
+              objectFit={'contain'}
+              layout={'fill'}
+              alt={`Asylum | ${partner.title}`}
+            />
           </a>
         ))}
       </div>

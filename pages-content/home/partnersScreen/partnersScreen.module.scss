@@ -19,109 +19,56 @@
   }
 }
 
-.partnersScreen__screenTitle {
+.title {
   width: rem(200);
   @media screen and (max-width: point(sm)) {
     width: rem(150);
   }
 }
 
-.partnersScreen__content {
+.content {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  margin-top: rem(100);
-  flex-wrap: wrap;
-  row-gap: 30px;
-  column-gap: 60px;
-  @media screen and (max-width: point(sm)) {
-    flex-direction: column;
-    margin-top: rem(60);
-    row-gap: 45px;
-  }
+  gap: 30px;
+  margin-top: rem(20);
 
-  .content__logo {
+  .link {
     position: relative;
-    &:not(:first-child) {
-      margin-left: rem(85);
-      @media screen and (max-width: point(md)) {
-        margin-left: rem(40);
-      }
-      @media screen and (max-width: point(sm)) {
-        margin-left: 0;
-        margin-top: rem(3.1);
-      }
+    width: 50%;
+    height: rem(50);
+
+    .logo {
+      transition: opacity 0.3s ease;
     }
 
-    > span {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      > span {
-        width: 100% !important;
-        height: 100% !important;
-      }
-    }
-
-    &:nth-child(1) {
-      width: rem(200);
-      height: rem(72);
-      @media screen and (max-width: point(sm)) {
-        width: rem(127);
-        height: rem(47);
-      }
-    }
-    &:nth-child(2) {
-      width: rem(226);
-      height: rem(28);
-      @media screen and (max-width: point(sm)) {
-        width: rem(142);
-        height: rem(17);
-      }
-    }
-    &:nth-child(3) {
-      width: rem(250);
-      height: rem(45);
-      @media screen and (max-width: point(sm)) {
-        width: rem(155);
-        height: rem(22);
-      }
-    }
-    &:nth-child(4) {
-      width: rem(125);
-      height: rem(100);
-      @media screen and (max-width: point(sm)) {
-        width: rem(165);
-        height: rem(46);
-      }
-    }
-    &:nth-child(5) {
-      width: rem(125);
-      height: rem(100);
-      @media screen and (max-width: point(sm)) {
-        width: rem(85);
-        height: rem(66);
-      }
+    .logo_basic {
+      opacity: 1;
     }
 
     .logo_colored {
       opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    .logo_basic {
-      opacity: 1;
-      transition: opacity 0.3s ease;
     }
 
     &:hover {
-      > .logo_colored {
-        opacity: 1;
-      }
-      > .logo_basic {
+      .logo_basic {
         opacity: 0;
       }
+      .logo_colored {
+        opacity: 1;
+      }
+    }
+  }
+  @media screen and (min-width: point(sm)) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: rem(60);
+
+    .link {
+      flex: 20% 0 0;
+      height: rem(90);
     }
   }
 }
