@@ -61,6 +61,7 @@
     @include font-ubuntu-regular;
 
     @media screen and (min-width: point(sm)) {
+      margin-top: rem(60);
       margin-bottom: rem(100);
       font-size: font(16);
       line-height: 200%;

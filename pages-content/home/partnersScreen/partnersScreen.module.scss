@@ -32,13 +32,13 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  gap: 30px;
   margin-top: rem(20);
+  gap: 20px;
 
   .link {
     position: relative;
     width: 50%;
-    height: rem(50);
+    height: rem(90);
 
     .logo {
       transition: opacity 0.3s ease;
@@ -62,13 +62,14 @@
     }
   }
   @media screen and (min-width: point(sm)) {
+    column-gap: 40px;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: rem(60);
 
     .link {
-      flex: 20% 0 0;
-      height: rem(90);
+      flex: 30% 0 0;
+      height: rem(190);
     }
   }
 }
