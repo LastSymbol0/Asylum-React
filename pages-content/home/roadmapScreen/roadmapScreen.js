@@ -24,7 +24,6 @@ const RoadmapScreen = () => {
   const locale = useLocales('pages.home.roadmap-screen')
   return (
     <div id='roadmap' className={styles.container}>
-      {/* <Image src={background} objectFit={'fill'} layout={'fill'} /> */}
       <ScreenTitle>{locale.title}</ScreenTitle>
       <div className={styles.roadmap}>
         {locale.stages.map((stage, index) => (
