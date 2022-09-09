@@ -1,252 +1,131 @@
-@use '../../../assets/styles/index.scss' as *;
+@use '../../../assets/styles/_colors.scss';
+@use '../../../assets/styles/index.scss' as fonts;
 
-.roadmapScreen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: rem(120);
-  padding: 0 rem(350);
-  @media screen and (max-width: point(lg)) {
-    padding: 0 rem(150);
-  }
-  @media screen and (max-width: point(md)) {
-    padding: 0 rem(100);
-  }
-  @media screen and (max-width: point(sm)) {
-    padding: 0 rem(16);
-    margin-top: 0;
-  }
-}
-
-.roadmapScreen__screenTitle {
-  width: rem(160);
-  @media screen and (max-width: point(sm)) {
-    width: rem(100);
-  }
-}
-
-.roadmapScreen__content {
+.container {
+  margin: 2rem 1rem 0;
+  padding: 8rem 0 5rem;
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+  margin-top: 2rem;
+
+  @media (min-width: fonts.point(sm)) {
+    gap: 3rem;
+  }
+
+  @media (min-width: fonts.point(md)) {
+    width: 65%;
+  }
+}
+
+.roadmapBlock {
+  position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  padding: rem(300) 0;
-  @media screen and (max-width: point(sm)) {
-    padding: rem(130) 0;
+  gap: 1rem;
+
+  @media (min-width: fonts.point(sm)) {
+    gap: 0;
   }
 }
 
-.roadmapScreen__background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-
-  > * {
-    width: 100%;
-    height: 100%;
-
-    > span {
-      width: 100% !important;
-      height: 100% !important;
-    }
-  }
-
-  .backgroundDesktop {
-    display: block;
-    @media screen and (max-width: point(sm)) {
-      display: none;
-    }
-  }
-
-  .backgroundMobile {
+.line {
+  width: 10%;
+  z-index: -2;
+  @media (max-width: fonts.point(sm)) {
     display: none;
-    @media screen and (max-width: point(sm)) {
-      display: block;
-    }
   }
 }
 
-.roadmapScreen__scheme {
-  margin-top: rem(31);
-  width: 100%;
-  display: grid;
-  gap: rem(25) rem(50);
-  grid-template-columns: repeat(2, 1fr);
+$border-width: 2px;
+$border-gradient: linear-gradient(to top right, #c806ff, #51bdff);
+$background-color: colors.color(dark100);
 
-  @media screen and (max-width: point(md)) {
-    gap: rem(25) rem(30);
-  }
+.quarterLabelWrapper {
+  position: relative;
 
-  @media screen and (max-width: point(sm)) {
-    margin-top: rem(18);
-    grid-template-columns: 1fr;
-    gap: rem(10);
-  }
-
-  .scheme__row {
+  .quarterLabel {
+    font-size: 0.875rem;
+    @include fonts.font-oxanium-medium;
+    text-transform: uppercase;
     display: flex;
-    flex-direction: column;
-    gap: rem(30);
     align-items: center;
-
-    @media screen and (min-width: point(sm)) {
-      justify-self: end;
-
-      &:nth-child(even) {
-        justify-self: start;
-        margin-top: rem(120);
-      }
-
-      &:last-child {
-        margin-top: rem(-35);
-        margin-left: rem(50);
-      }
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    padding: 0.375rem;
+    background: $background-color;
+    @media (min-width: fonts.point(sm)) {
+      font-size: 2rem;
     }
   }
 
-  .scheme__block {
-    position: relative;
-    padding: rem(30);
-    z-index: 2;
-    @media screen and (max-width: point(md)) {
-      padding: rem(20);
-    }
-    @media screen and (max-width: point(sm)) {
-      padding: rem(14);
-      width: rem(190);
-    }
-
-    pre {
-      @include font-ubuntu-regular;
-      font-size: font(18);
-      line-height: 130%;
-      max-width: rem(252);
-      @media screen and (max-width: point(sm)) {
-        @include font-ubuntu-light;
-        font-size: font(12);
-        max-width: rem(190);
-      }
-    }
-
-    > span {
-      position: absolute !important;
-      top: 50% !important;
-      left: 50% !important;
-      transform: translate(-50%, -50%);
-      width: 100% !important;
-      height: 100% !important;
-      z-index: -1;
-    }
-
-    .block__circle {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      @include font-oxanium-medium;
-      font-size: font(36);
-      text-transform: uppercase;
-      z-index: -2;
-      background-color: color(dark100);
-      border-radius: 50%;
-      padding: rem(20);
-      @media screen and (max-width: point(sm)) {
-        transform: translateY(0);
-        top: rem(10);
-        font-size: font(14);
-        padding: rem(8);
-      }
-
-      > span {
-        position: absolute !important;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%);
-        width: 100% !important;
-        height: 100% !important;
-        min-width: 100% !important;
-        min-height: 100% !important;
-        z-index: -1;
-      }
-
-      &::before {
-        content: '';
-        position: absolute;
-        height: 2px;
-        background-color: color(light100);
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: -2;
-        @media screen and (max-width: point(sm)) {
-          display: none;
-        }
-      }
-    }
-  }
-
-  .scheme__scheme {
-    width: rem(200);
-    height: rem(200);
-    display: none;
-    @media screen and (max-width: point(sm)) {
-      display: none;
-    }
-
-    > span {
-      width: 100% !important;
-      height: 100% !important;
-    }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 50%;
+    margin: -$border-width;
+    background: $border-gradient;
   }
 }
 
-.roadmapScreen__scheme .scheme__row {
-  --block-circle-13-translate: #{rem(60)};
-  --block-circle-24-translate: #{rem(110)};
+.quarterWrapper {
+  position: relative;
+  flex-grow: 1;
 
-  @media screen and (max-width: point(md)) {
-    --block-circle-13-translate: #{rem(30)};
-    --block-circle-24-translate: #{rem(55)};
+  $cut-size: 15px;
+  $clip-path: polygon(
+    0% 0%,
+    calc(100% - $cut-size) 0%,
+    100% $cut-size,
+    100% 100%,
+    $cut-size 100%,
+    0% calc(100% - $cut-size)
+  );
+
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: -$border-width;
+    background: $border-gradient;
+
+    clip-path: $clip-path;
   }
 
-  &:nth-child(odd) {
-    .block__circle {
-      right: calc(100% + var(--block-circle-13-translate));
+  .quarter {
+    @include fonts.font-ubuntu-light;
+    font-size: 0.75rem;
+    line-height: 150%;
+    padding: 1rem 1rem 1rem 1.25rem;
+    background-color: $background-color;
+    clip-path: $clip-path;
 
-      &::before {
-        width: calc(var(--block-circle-13-translate) + rem(10));
-        left: 90%;
-      }
+    @media (min-width: fonts.point(sm)) {
+      @include fonts.font-ubuntu-regular;
+      font-size: fonts.font(18);
+      padding: 1rem 1rem 1rem 2rem;
     }
-  }
 
-  &:nth-child(even) {
-    .block__circle {
-      left: calc(100% + var(--block-circle-24-translate));
-
-      &::before {
-        width: calc(var(--block-circle-24-translate) + rem(10));
-        right: 90%;
-      }
-    }
-  }
-
-  @media screen and (max-width: point(sm)) {
-    --block-mobile-translate: #{rem(21)};
-    &:nth-child(n + 1) {
-      flex-direction: row !important;
-      justify-content: center !important;
-
-      .scheme__block {
-        margin-right: 0 !important;
-        margin-left: 0 !important;
-      }
-
-      .block__circle {
-        right: calc(100% + var(--block-mobile-translate)) !important;
-        left: auto !important;
-      }
+    li {
+      list-style-type: '- ';
     }
   }
 }

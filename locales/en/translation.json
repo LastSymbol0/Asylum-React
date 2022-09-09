@@ -108,54 +108,31 @@
       "roadmap-screen": {
         "title": "Roadmap",
         "stages": [
-          {
-            "title": "q3",
-            "list": [
-              "· Metaverse objects standard",
-              "· DAO protocol",
-              "· App for artists and developers",
-              "· Testnet launch",
-              "· 10 MOU with future space",
-              "builders"
-            ]
-          },
-          {
-            "title": "q4",
-            "list": [
-              "· Exchange protocol for items",
-              "and currencies",
-              "· Metaverse interface for User",
-              "· Items explorer app",
-              "· Consortium of Metaverse",
-              " key players for IMP definition"
-            ]
-          },
-          {
-            "title": "q1",
-            "list": [
-              "· Seed round",
-              "· Whitepaper",
-              "· MVP development start",
-              "· Integrations with games"
-            ]
-          },
-          {
-            "title": "q2",
-            "list": [
-              "· Backend solution",
-              "· Involving of “anchor” apps",
-              "to the ecosystem"
-            ]
-          },
-          {
-            "title": "q3",
-            "list": [
-              "· Identity (Avatar) protocol",
-              "· Marketplace as a space",
-              "· Integrators’ spaces are ready",
-              "to deploy"
-            ]
-          }
+          [
+            "Metaverse objects standard",
+            "DAO protocol",
+            "App for artists and developers",
+            "Testnet launch",
+            "Framework for Creators",
+            "5+ MOU with future space builders"
+          ],
+          [
+            "Asylum economy",
+            "Metaverse interface for User (rename to sell)",
+            "Items explorer",
+            "Metaverse key players consortium"
+          ],
+          [
+            "Decentralized and trusted backend for games",
+            "Involving “anchor” apps to the ecosystem"
+          ],
+          ["Avatar system", "Marketplace as a space"],
+          [
+            "Decentralized storage",
+            "Advertisement console",
+            "Launch preparation"
+          ],
+          ["Live on Kusama", "10 Spaces launched", "20К+ MAU"]
         ]
       },
       "team-screen": {
@@ -418,7 +395,8 @@
                   "link": "https://www.linkedin.com/in/olesiaarkh/"
                 }
               ]
-            },            {
+            },
+            {
               "name": "Alexander Kaplaty",
               "position": "Supercolony, Financial Advisor",
               "supercolonyMember": true,

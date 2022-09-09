@@ -3,84 +3,49 @@ import { useLocales } from '../../../hooks/useLocales'
 
 import ScreenTitle from '../../../components/UI/screenTitle/screenTitle'
 
-import Image from 'next/image'
-import backgroundImage from './assets/background.png'
-import backgroundMobileImage from './assets/background@mobile.png'
-import block1Image from './assets/block-1-bad.png'
-import block2Image from './assets/block-2.png'
-import block3Image from './assets/block-3.png'
-import block4Image from './assets/block-4.png'
-import block5Image from './assets/block-5.png'
-import circleImage from './assets/circle.png'
-import scheme1Image from './assets/scheme-1.png'
-import scheme3Image from './assets/scheme-2.png'
-import scheme6Image from './assets/scheme-3.png'
+const generateQuarter = (index) => {
+  const date = new Date()
+  const startYear = +date.getFullYear().toString().slice(-2)
+  const startQuarter = Math.floor(date.getMonth() / 3)
 
-const data = [
-  {
-    block: block1Image,
-    scheme: scheme1Image,
-  },
-  {
-    block: block2Image,
-  },
-  {
-    block: block3Image,
-    scheme: scheme3Image,
-  },
-  {
-    block: block4Image,
-  },
-  {
-    block: block5Image,
-  },
-  {
-    scheme: scheme6Image,
-  },
-]
+  const quarterBase4String = (startYear * 4 + startQuarter + index).toString(4)
+  const year = parseInt(quarterBase4String.slice(0, -1), 4)
+  const quarter = +quarterBase4String.slice(-1) + 1
+  return `${year}Q${quarter}`
+}
+
+const Line = () => (
+  <svg xmlns='http://www.w3.org/2000/svg' className={styles.line} height={1}>
+    <line x1='0' y1='1' x2='100%' y2='1' stroke={'white'} />
+  </svg>
+)
 
 const RoadmapScreen = () => {
   const locale = useLocales('pages.home.roadmap-screen')
   return (
-    <div id='roadmap' className={styles.roadmapScreen}>
-      <div className={styles.roadmapScreen__content}>
-        <ScreenTitle className={styles.roadmapScreen__screenTitle}>
-          {locale.title}
-        </ScreenTitle>
-        <div className={styles.roadmapScreen__scheme}>
-          {data.map((data, index) => {
-            const stage = locale.stages[index]
-            return (
-              <div key={index} className={styles.scheme__row}>
-                {stage && (
-                  <div className={styles.scheme__block}>
-                    {stage.list.map((text, index) => (
-                      <pre key={index}>{text}</pre>
-                    ))}
-                    <Image src={data.block} priority={true} alt='' />
-                    <div className={styles.block__circle}>
-                      {stage.title}
-                      <Image src={circleImage} priority={true} alt='' />
-                    </div>
-                  </div>
-                )}
-                {data.scheme && (
-                  <div className={styles.scheme__scheme}>
-                    <Image src={data.scheme} priority={true} alt='' />
-                  </div>
-                )}
+    <div id='roadmap' className={styles.container}>
+      {/* <Image src={background} objectFit={'fill'} layout={'fill'} /> */}
+      <ScreenTitle>{locale.title}</ScreenTitle>
+      <div className={styles.roadmap}>
+        {locale.stages.map((stage, index) => (
+          <div key={index} className={styles.roadmapBlock}>
+            <div className={styles.quarterLabelWrapper}>
+              <div className={styles.quarterLabel}>
+                {generateQuarter(index)}
               </div>
-            )
-          })}
-        </div>
-        <div className={styles.roadmapScreen__background}>
-          <div className={styles.backgroundDesktop}>
-            <Image src={backgroundImage} priority={true} alt='' />
+            </div>
+            <Line />
+            <div className={styles.quarterWrapper}>
+              <div className={styles.quarter}>
+                <ul>
+                  {stage.map((point, index) => (
+                    <li key={index}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
-          <div className={styles.backgroundMobile}>
-            <Image src={backgroundMobileImage} priority={true} alt='' />
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   )
