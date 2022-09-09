@@ -51,6 +51,18 @@ $border-width: 2px;
 $border-gradient: linear-gradient(to top right, #c806ff, #51bdff);
 $background-color: colors.color(dark100);
 
+@mixin borderWithGradient {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -$border-width;
+  background: $border-gradient;
+}
+
 .quarterLabelWrapper {
   position: relative;
 
@@ -70,16 +82,8 @@ $background-color: colors.color(dark100);
   }
 
   &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
+    @include borderWithGradient;
     border-radius: 50%;
-    margin: -$border-width;
-    background: $border-gradient;
   }
 }
 
@@ -98,15 +102,7 @@ $background-color: colors.color(dark100);
   );
 
   &:before {
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: -$border-width;
-    background: $border-gradient;
-
+    @include borderWithGradient;
     clip-path: $clip-path;
   }
 
