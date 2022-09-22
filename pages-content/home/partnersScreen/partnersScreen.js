@@ -18,6 +18,8 @@ import logoBlockchainGameAllianceColored from './assets/logo-blockchain-game-all
 import logoBlockchainGameAlliance from './assets/logo-blockchain-game-alliance.png'
 import logoMetaverseStanardsForum from './assets/logo-metaverse-standrads-forum.png'
 import logoMetaverseStanardsForumColored from './assets/logo-metaverse-standrads-forum-colored.png'
+import xandarColored from './assets/xandar-colored.png'
+import xandar from './assets/xandar.png'
 import classNames from 'classnames'
 
 const data = {
@@ -48,6 +50,10 @@ const data = {
   'metaverse-standrads-forum': {
     colored: logoMetaverseStanardsForumColored,
     basic: logoMetaverseStanardsForum,
+  },
+  xandar: {
+    colored: xandarColored,
+    basic: xandar,
   },
 }
 
