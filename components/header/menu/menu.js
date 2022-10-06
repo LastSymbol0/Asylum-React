@@ -72,6 +72,9 @@ const TheMenu = ({
             </a>
           )
         })}
+        <a key='docs' href={'https://docs.asylum.space/'}>
+          {'docs'}
+        </a>
       </div>
     </div>
   )

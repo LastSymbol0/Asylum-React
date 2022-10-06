@@ -168,6 +168,9 @@ const Header = () => {
             {_.title}
           </a>
         ))}
+        <a key='docs' href={'https://docs.asylum.space/'}>
+          {'docs'}
+        </a>
         <div
           style={{ left: `${offsetX}px` }}
           className={styles.header__activeLine}

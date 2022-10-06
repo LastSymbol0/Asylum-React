@@ -39,7 +39,7 @@
     }
 
     > :not(:first-child):not(:last-child) {
-      margin-left: rem(114);
+      margin-left: rem(84);
     }
 
     > :not(:last-child) {
@@ -110,7 +110,7 @@
   position: absolute;
   top: calc(100% + rem(13));
   left: 0;
-  width: rem(221);
+  width: rem(160);
   height: 1.3px;
   background: linear-gradient(
     90deg,

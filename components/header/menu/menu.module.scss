@@ -20,7 +20,7 @@
 
     &.active {
       + .menu__list {
-        max-height: rem(160);
+        max-height: rem(180);
         > * {
           transform: translateY(0);
         }
